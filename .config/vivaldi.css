@@ -1,0 +1,89 @@
+/* General layout */
+:root {
+    --stack-width: 300px;
+    --address-bar-height: 30px;
+    --extensions-height: 30px;
+}
+
+.mainbar {
+    position: absolute;
+    width: var(--stack-width);
+}
+
+.toolbar > .button-textonly {
+    position: absolute;
+    top: 0;
+    width: var(--stack-width);
+    height: var(--address-bar-height);
+    margin-left: 0px;
+    outline: none !important;
+}
+
+.toolbar > .button-textonly:is(:hover, :focus-within) {
+    width: 100vw;
+}
+
+.toolbar-extensions {
+    position: absolute !important;
+    top: var(--address-bar-height);
+    width: var(--stack-width);
+    background: #11111b;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#tabs-tabbar-container {
+    width: var(--stack-width);
+    min-width: var(--stack-width);
+    max-width: var(--stack-width);
+    top: calc(var(--address-bar-height) + var(--extensions-height));
+    height: calc(100% - var(--address-bar-height) + var(--extensions-height)) !important;
+}
+
+#panels-container {
+    position: absolute !important;
+}
+
+/* Coloring */
+
+.ExtensionIcon--Hidden {
+    background: transparent !important;
+}
+.color-behind-tabs-off.address-top .mainbar { background: #11111b !important; border: none !important; }
+.tab-strip { background: #11111b; }
+.tab {
+    color: #6c7086 !important;
+    background: #11111b !important;
+    transition: all 0.25s;
+    border-radius: 0 !important;
+}
+.tab.active {
+    color: #cdd6f4 !important;
+    background: #181825 !important;
+}
+
+/* Remove unknown SVG */
+/* Remove Vivaldi button */
+/* Remove tab buttons */
+/* Remove unneccesary button from address bar */
+/* Remove unneccesary button from address bar */
+/* Unclear what this is, but it is blank */
+/* Remove add tab button */
+/* Remove unknown footer */
+#browser > svg { display: none; }
+#main > div.mainbar::before { content: ""; }
+#main > div.mainbar > div::before { content: none !important; }
+#main > div.mainbar > div > div.window-buttongroup.on-mainbar { display: none; }
+#main > div.mainbar > div > button { display: none; }
+#main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div:nth-child(1) > div { display: none; }
+#main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div.toolbar.toolbar-small.toolbar-insideinput { display: none; }
+#header { display: none; }
+#tabs-container > div.resize > div > div { display: none; }
+#browser > footer { display: none; }
+#switch > div > div.button-toolbar.panel-clickoutside-ignore { display: none; }
+
+/* Re-adds icons for when a tab is playing audio and hides noise icon */
+.favicon { transform: scale(1) !important; }
+.tab-audio { display: none; }
