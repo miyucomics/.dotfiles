@@ -1,6 +1,6 @@
 [manager]
 cwd = { fg = "blue" }
-preview_hovered = {}
+preview_hovered = { fg = "cyan" }
 syntect_theme = "~/.config/yazi/theme.txt"
 
 [status]
@@ -12,12 +12,16 @@ title = { bold = true }
 
 [filetype]
 rules = [
+	{ name = "*/", is = "link", fg = "green" },
+	{ name = "*", is = "link", fg = "green" },
 	{ name = "*/", fg = "blue" },
 	{ mime = "audio/*", fg = "red" },
 	{ mime = "image/*", fg = "cyan" },
-	{ mime = "video/*", fg = "yellow" }
+	{ mime = "video/*", fg = "yellow" },
 ]
 
-[icons]
-"*" = ""
-"*/" = ""
+[icon]
+rules = [
+    { name = "*", text = "" },
+    { name = "*/", text = "" }
+]
