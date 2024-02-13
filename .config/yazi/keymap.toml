@@ -75,6 +75,7 @@ keymap = [
 
 [input]
 keymap = [
+    { on = [ "<Backspace>" ], exec = "backspace" },
 	{ on = [ "<Esc>" ], exec = "escape" },
 	{ on = [ "<Enter>" ], exec = "close --submit" },
 	{ on = [ "h" ], exec = "move -1" },
