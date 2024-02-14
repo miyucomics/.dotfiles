@@ -12,13 +12,5 @@ function record() {
     wf-recorder -g "$(slurp)" -f output.mp4
 }
 
-function ya() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
 eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
