@@ -1,6 +1,7 @@
 [general]
 mode = normal
 framerate = 60
+bar_width = 4
 
 [input]
 method = pulse
