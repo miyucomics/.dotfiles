@@ -15,13 +15,15 @@ viewnior = [{ exec = 'viewnior "$@"', orphan = true }]
 zathura = [{ exec = 'zathura "$@"', orphan = true }]
 unzip = [{ exec = 'unzip "$@" -x __M*' }]
 ripdrag = [{ exec = 'ripdrag -a "$@"', orphan = true }]
+swww = [{ exec = 'swww img "$@" -tcenter', orphan = true }]
+swww_pixel = [{ desc = "swww pixel", exec = 'swww img "$@" -tcenter -fNearest', orphan = true }]
 
 [open]
 rules = [
     {mime = "application/pdf", use = ["zathura", "ripdrag"]},
     {name = "application/video", use = ["browser", "ripdrag"]},
     {mime = "application/zip", use = ["unzip", "ripdrag"]},
-    {mime = "image/*", use = ["viewnior", "browser", "ripdrag"]},
+    {mime = "image/*", use = ["viewnior", "swww", "swww_pixel", "browser", "ripdrag"]},
     {name = "*.html", use = ["browser", "nvim", "ripdrag"]},
 	{name = "*/", use = ["nvim", "ripdrag"]},
 	{name = "*", use = ["nvim", "ripdrag"]}
