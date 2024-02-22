@@ -17,9 +17,5 @@ function ya() {
 	rm -f $tmp
 }
 
-function record() {
-    wf-recorder -g "$(slurp)" -f output.mp4
-}
-
 eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
