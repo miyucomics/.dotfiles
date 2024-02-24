@@ -37,7 +37,6 @@ return {
 				sources = {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.completion.luasnip,
-					null_ls.builtins.formatting.rustfmt,
 				},
 			})
 			vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
