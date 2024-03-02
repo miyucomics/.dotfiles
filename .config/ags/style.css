@@ -1,0 +1,12 @@
+window.bar {
+    background-color: #11111b;
+    font: 12px "JetBrains Mono";
+}
+
+button {
+    background-color: transparent;
+}
+
+label {
+    color: #cdd6f4;
+}
