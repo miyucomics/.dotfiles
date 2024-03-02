@@ -24,7 +24,7 @@ rules = [
     {mime = "application/pdf", use = ["zathura", "ripdrag"]},
     {name = "application/video", use = ["browser", "ripdrag"]},
     {mime = "application/zip", use = ["unzip", "ripdrag"]},
-    {mime = "application/tar", use = ["untar", "ripdrag"]},
+    {mime = "*.tar.gz", use = ["untar", "ripdrag"]},
     {mime = "image/*", use = ["viewnior", "swww", "swww_pixel", "browser", "ripdrag"]},
     {name = "*.html", use = ["browser", "nvim", "ripdrag"]},
 	{name = "*/", use = ["nvim", "ripdrag"]},
