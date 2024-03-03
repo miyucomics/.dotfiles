@@ -3,10 +3,10 @@ window.bar {
     font: 12px "JetBrains Mono";
 }
 
-button {
-    background-color: transparent;
-}
-
 label {
     color: #cdd6f4;
+}
+
+.full {
+    color: #89b4fa;
 }
