@@ -1,23 +1,23 @@
-import workspaces from "./workspaces.ts"
-import media from "./media.ts"
-import title from "./title.ts"
-import progression from "./progression.ts"
-import volume from "./volume.ts"
-import clock from "./clock.ts"
+import workspaces from "./modules/workspaces.js"
+import media from "./modules/media.js"
+import title from "./modules/title.js"
+import volume from "./modules/volume.js"
+import clock from "./modules/clock.js"
 
 export default Widget.Window({
     name: "bar",
     class_name: "bar",
+    margins: [10, 10],
     anchor: ["top", "left", "right"],
-    margins: [10, 6],
     child: Widget.CenterBox({
+        className: "bar-container",
         start_widget: Widget.Box({
             spacing: 8,
             children: [workspaces(), media()]
         }),
         center_widget: Widget.Box({
             spacing: 8,
-            children: [title(), progression()]
+            children: [title()]
         }),
         end_widget: Widget.Box({
             hpack: "end",

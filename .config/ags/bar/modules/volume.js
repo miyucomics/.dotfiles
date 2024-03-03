@@ -13,6 +13,7 @@ export default () =>
                     0: "muted"
                 }
                 const icon = audio.speaker.is_muted ? 0 : [101, 67, 34, 1, 0].find(threshold => threshold <= audio.speaker.volume * 100)
+                if (icon == undefined) return
                 self.icon = `audio-volume-${mapping[icon]}-symbolic`
             }),
             Widget.Label({

@@ -3,20 +3,25 @@ const notifications = await Service.import("notifications")
 const NotificationIcon = ({ app_entry, app_icon, image }) => {
     if (image)
         return Widget.Box({
-            css: `background-image: url("${image}"); background-size: contain; background-repeat: no-repeat; background-position: center;`
+            className: "icon",
+            css: `
+            background-image: url("${image}");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            `
         })
     let icon = "dialog-information-symbolic"
     if (Utils.lookUpIcon(app_icon)) icon = app_icon
     if (app_entry && Utils.lookUpIcon(app_entry)) icon = app_entry
-    return Widget.Icon(icon)
+    return Widget.Icon({
+        icon: icon,
+        className: "icon"
+    })
 }
 
-export const Notification = notification => {
-    const icon = Widget.Box({
-        vpack: "start",
-        className: "icon",
-        child: NotificationIcon(notification)
-    })
+const Popup = notification => {
+    const icon = NotificationIcon(notification)
 
     const title = Widget.Label({
         class_name: "title",
@@ -71,10 +76,10 @@ const popups = notifications.bind("popups")
 export default Widget.Window({
     name: "notifications",
     className: "notification-window",
-    anchor: ["top", "left"],
+    anchor: ["bottom", "left"],
     child: Widget.Box({
         vertical: true,
         className: "notifications",
-        children: popups.as(popup => popup.map(Notification))
+        children: popups.as(popup => popup.map(Popup))
     })
 })

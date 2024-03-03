@@ -6,6 +6,14 @@ label {
     color: #cdd6f4;
 }
 
+.bar {
+    background: #11111b;
+}
+
+.bar-container {
+    padding: 10px;
+}
+
 .spin {
     font-size: 5px;
 }
@@ -33,20 +41,23 @@ window.notification-window {
     margin-right: 1em;
 }
 
-.icon image {
+image.icon {
     font-size: 10px;
     margin: 7.5px;
 }
 
-.icon box {
+box.icon {
     min-width: 25px;
     min-height: 25px;
-    border-radius: 7px;
 }
 
 .notification {
     min-width: 350px;
     padding: 1em;
-    margin: .5em;
+    margin: 0.5em;
     background: #11111b;
+}
+
+.critical {
+    border: 1px solid red;
 }
