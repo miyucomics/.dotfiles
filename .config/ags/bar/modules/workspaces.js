@@ -17,7 +17,8 @@ export default () => {
                     on_primary_click: () => hyprland.messageAsync(`dispatch workspace ${id}`),
                     child: Widget.Icon({
                         icon: activeId.as(i => `radio-${i == id ? "checked-" : ""}symbolic`),
-                        setup: self => self.hook(hyprland, (self, _) => self.toggleClassName("occupied", (hyprland.getWorkspace(id)?.windows || 0) > 0)),
+                        setup: self =>
+                            self.hook(hyprland, (self, _) => self.toggleClassName("occupied", (hyprland.getWorkspace(id)?.windows || 0) > 0)),
                         className: "workspace"
                     })
                 })
