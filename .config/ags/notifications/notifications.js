@@ -45,20 +45,28 @@ const Popup = notification => {
         wrap: true
     })
 
-    const actions = Widget.Box({
-        class_name: "actions",
-        children: notification.actions.map(({ id, label }) =>
-            Widget.EventBox({
-                hexpand: true,
-                class_name: "action-button",
-                on_primary_click: () => notification.invoke(id),
-                child: Widget.Label(label)
+    const actions =
+        notification.actions.length > 0
+            ? Widget.Revealer({
+                transition: "slide_down",
+                child: Widget.Box({
+                    children: notification.actions.map(action =>
+                        Widget.Button({
+                            class_name: "action-button",
+                            on_clicked: () => notification.invoke(action.id),
+                            child: Widget.Label(action.label),
+                            hexpand: true
+                        })
+                    )
+                })
             })
-        )
-    })
+            : null
 
     return Widget.EventBox({
         on_primary_click: () => notification.dismiss(),
+        on_hover: () => {
+            if (actions) actions.reveal_child = true
+        },
         child: Widget.Box({
             class_name: `notification ${notification.urgency}`,
             vertical: true,
@@ -76,7 +84,7 @@ const popups = notifications.bind("popups")
 export default Widget.Window({
     name: "notifications",
     className: "notification-window",
-    anchor: ["bottom", "left"],
+    anchor: ["top", "left"],
     child: Widget.Box({
         vertical: true,
         className: "notifications",
