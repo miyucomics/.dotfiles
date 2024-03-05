@@ -1,7 +1,16 @@
-import bar from "./bar/bar.js"
-import notification from "./notifications/notifications.js"
+const main = "/tmp/ags/main.js"
 
-App.config({
-    style: "./style.css",
-    windows: [bar, notification]
-})
+await Utils.execAsync([
+    "bun",
+    "build",
+    `${App.configDir}/main.ts`,
+    "--outfile",
+    main,
+    "--external",
+    "resource://*",
+    "--external",
+    "gi://*",
+    "--external",
+    "file://*"
+])
+await import(`file://${main}`)
