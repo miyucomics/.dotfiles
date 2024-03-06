@@ -1,16 +1,11 @@
-const main = "/tmp/ags/main.js"
+import bar from "./bar/bar.js"
+import notification from "./notifications/notifications.js"
+import DateMenu from "./datemenu/DateMenu.js"
 
-await Utils.execAsync([
-    "bun",
-    "build",
-    `${App.configDir}/main.ts`,
-    "--outfile",
-    main,
-    "--external",
-    "resource://*",
-    "--external",
-    "gi://*",
-    "--external",
-    "file://*"
-])
-await import(`file://${main}`)
+App.config({
+    style: "./style.css",
+    onConfigParsed: () => {
+        App.addWindow(DateMenu())
+    },
+    windows: [bar, notification]
+})
