@@ -6,6 +6,18 @@ label {
     color: #cdd6f4;
 }
 
+.notification-column {
+    background: #11111b;
+}
+
+.date-column {
+    background: #11111b;
+}
+
+.calendar {
+    padding: 1em;
+}
+
 .bar {
     background: #11111b;
 }

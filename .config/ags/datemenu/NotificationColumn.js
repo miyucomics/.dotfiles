@@ -18,15 +18,8 @@ const ClearButton = () =>
     Widget.Button({
         on_clicked: notifications.clear,
         sensitive: notifs.as(n => n.length > 0),
-        child: Widget.Box({
-            children: [Widget.Label("Clear "), Widget.Icon({ icon: "radio-checked-symbolic" })]
-        })
-    })
-
-const Header = () =>
-    Widget.Box({
-        class_name: "header",
-        children: [Widget.Label({ label: "Notifications", hexpand: true, xalign: 0 }), ClearButton()]
+        visible: notifs.as(n => n.length > 0),
+        child: Widget.Label("Clear")
     })
 
 const NotificationList = () => {
@@ -76,16 +69,15 @@ const Placeholder = () =>
         vexpand: true,
         hexpand: true,
         visible: notifs.as(n => n.length === 0),
-        children: [Widget.Icon("radio-symbolic"), Widget.Label("Your inbox is empty")]
+        children: [Widget.Label("Your inbox is empty")]
     })
 
 export default () =>
     Widget.Box({
-        class_name: "notifications",
-        css: `min-width: ${300}px`,
+        class_name: "notification-column",
+        css: `min-width: ${300}px; padding: 10px;`,
         vertical: true,
         children: [
-            Header(),
             Widget.Scrollable({
                 vexpand: true,
                 hscroll: "never",
