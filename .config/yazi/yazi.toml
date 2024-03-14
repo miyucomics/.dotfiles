@@ -9,15 +9,15 @@ show_hidden = true
 tab_size = 4
 
 [opener]
-browser = [{ exec = 'vivaldi "$@"', orphan = true }]
-nvim = [{ exec = 'nvim "$@"', block = true }]
-viewnior = [{ exec = 'viewnior "$@"', orphan = true }]
-zathura = [{ exec = 'zathura "$@"', orphan = true }]
-unzip = [{ exec = 'unzip "$@" -x __M*' }]
-untar = [{ exec = 'tar xzf "$@"' }]
-ripdrag = [{ exec = 'ripdrag -a "$@"', orphan = true }]
-swww = [{ exec = 'swww img "$@" -tcenter', orphan = true }]
-swww_pixel = [{ desc = "swww pixel", exec = 'swww img "$@" -tcenter -fNearest', orphan = true }]
+browser = [{ run = 'vivaldi "$@"', orphan = true }]
+nvim = [{ run = 'nvim "$@"', block = true }]
+viewnior = [{ run = 'viewnior "$@"', orphan = true }]
+zathura = [{ run = 'zathura "$@"', orphan = true }]
+unzip = [{ run = 'unzip "$@" -x __M*' }]
+untar = [{ run = 'tar xzf "$@"' }]
+ripdrag = [{ run = 'ripdrag -a "$@"', orphan = true }]
+swww = [{ run = 'swww img "$@" -tcenter', orphan = true }]
+swww_pixel = [{ desc = "swww pixel", run = 'swww img "$@" -tcenter -fNearest', orphan = true }]
 
 [open]
 rules = [
