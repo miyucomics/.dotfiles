@@ -11,7 +11,49 @@
   display: none !important;
 }
 
+#statuspanel {
+  display: none !important;
+}
+
 #sidebar-header,
 #sidebar-splitter {
   display: none !important;
+}
+
+#urlbar-zoom-button,
+#star-button-box {
+  display: none !important;
+}
+
+#navigator-toolbox {
+  width: 300px !important;
+  font-size: 0.85em !important;
+  z-index: 100 !important;
+}
+
+#navigator-toolbox:hover {
+  width: 750px !important;
+}
+
+#urlbar-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#urlbar {
+  --urlbar-height: 100% !important;
+  --urlbar-toolbar-height: 100% !important;
+}
+
+#sidebar-box {
+  width: 300px !important;
+}
+
+#appcontent {
+  position: absolute !important;
+  top: 0px;
+  left: 300px;
+  z-index: 10 !important;
+  height: 100vh !important;
+  width: calc(100vw - 300px) !important;
 }
