@@ -1,37 +1,68 @@
-/* General layout */
 :root {
     --stack-width: 300px;
-    --address-bar-height: 30px;
-    --extensions-height: 30px;
+    --address-bar-height: 35px;
+    --extensions-height: 35px;
+    --panel-width: 35px;
+    --panel-open-width: 400px;
+    --address-offset: 0px;
+}
+
+:root:has(#panels-container.icons) {
+    --stack-width: 335px;
+    --address-offset: 35px;
+}
+
+:root:has(.button-toolbar.active) {
+    --address-offset: var(--panel-open-width);
 }
 
 .mainbar {
     position: absolute;
+    top: 0;
+    left: var(--address-offset);
     width: var(--stack-width);
+    height: calc(var(--address-bar-height) + var(--extensions-height));
 }
 
+/* address bar */
 .toolbar > .button-textonly {
-    position: absolute;
-    top: 0;
-    width: var(--stack-width);
-    height: var(--address-bar-height);
-    margin-left: 0px;
-    outline: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: var(--stack-width) !important;
+    height: var(--address-bar-height) !important;
+    margin-left: 0px !important;
+    border-radius: 0;
+    border: none !important;
 }
 
 .toolbar > .button-textonly:is(:hover, :focus-within) {
-    width: 100vw;
+    width: 100vw !important;
 }
 
+/* extension bar */
 .toolbar-extensions {
     position: absolute !important;
     top: var(--address-bar-height);
+    height: var(--extension-height);
     width: var(--stack-width);
-    background: #11111b;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.toolbar-extensions > div:not(.button-toolbar) {
+    display: none;
+}
+
+.button-toolbar {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hide the Vivaldi menu button */
+#main > div.mainbar > div > button {
+    display: none;
 }
 
 #tabs-tabbar-container {
@@ -42,17 +73,15 @@
     height: calc(100% - var(--address-bar-height) + var(--extensions-height)) !important;
 }
 
-#panels-container {
-    position: absolute !important;
+#panels-container.icons {
+    width: var(--panel-width) !important;
 }
 
-/* Coloring */
-
-.ExtensionIcon--Hidden {
-    background: transparent !important;
+#panels-container:has(.button-toolbar.active) {
+    width: var(--panel-open-width) !important;
 }
-.color-behind-tabs-off.address-top .mainbar { background: #11111b !important; border: none !important; }
-.tab-strip { background: #11111b; }
+
+/* coloring */
 .tab {
     color: #6c7086 !important;
     background: #11111b !important;
@@ -63,27 +92,28 @@
     color: #cdd6f4 !important;
     background: #181825 !important;
 }
+.tab-strip { background: #11111b; }
 
-/* Remove unknown SVG */
-/* Remove Vivaldi button */
-/* Remove tab buttons */
-/* Remove unneccesary button from address bar */
-/* Remove unneccesary button from address bar */
-/* Unclear what this is, but it is blank */
-/* Remove add tab button */
-/* Remove unknown footer */
-#browser > svg { display: none; }
-#main > div.mainbar::before { content: ""; }
-#main > div.mainbar > div::before { content: none !important; }
-#main > div.mainbar > div > div.window-buttongroup.on-mainbar { display: none; }
-#main > div.mainbar > div > button { display: none; }
+/*
+Remove unknown SVG
+Remove tab + button
+Remove close button from tabs
+Remove setting button
+Remove buttons from address bar
+Remove unknown header element
+Remove unknown footer element
+*/
+#browser > svg,
+#tabs-container > div.resize > div > div,
+.tab-header > .close,
+#switch > div > div.button-toolbar.panel-clickoutside-ignore,
 #main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div:nth-child(1) > div { display: none; }
 #main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div.toolbar.toolbar-small.toolbar-insideinput { display: none; }
-#header { display: none; }
-#tabs-container > div.resize > div > div { display: none; }
-#browser > footer { display: none; }
-#switch > div > div.button-toolbar.panel-clickoutside-ignore { display: none; }
+#header,
+#browser > footer {
+    display: none !important;
+}
 
-/* Re-adds icons for when a tab is playing audio and hides noise icon */
+/* Add back favicon when a tab is playing audio */
 .favicon { transform: scale(1) !important; }
 .tab-audio { display: none; }
