@@ -5,7 +5,7 @@ return {
     opts = {
         sync_install = false,
         auto_install = false,
-        ensure_installed = { "lua", "rust" },
+        ensure_installed = { "lua", "rust", "json", "css", "html", "javascript" },
         highlight = { enable = true },
     },
 }
