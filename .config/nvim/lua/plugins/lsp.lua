@@ -11,12 +11,10 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		event = "BufEnter",
 		opts = { ensure_installed = servers },
 	},
 	{
 		"neovim/nvim-lspconfig",
-		event = "BufEnter",
 		keys = {
 			{ "K", vim.lsp.buf.hover },
 			{ "<leader>gd", vim.lsp.buf.definition },
@@ -42,7 +40,6 @@ return {
 	},
 	{
 		"nvimtools/none-ls.nvim",
-		event = "BufEnter",
 		config = function()
 			local null_ls = require("null-ls")
 			null_ls.setup({
