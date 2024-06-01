@@ -1,4 +1,4 @@
-local servers = { "lua_ls", "pylsp", "rust_analyzer", "cssls", "emmet_language_server", "html", "tsserver" }
+local servers = { "lua_ls", "pylsp", "rust_analyzer" }
 
 return {
 	{

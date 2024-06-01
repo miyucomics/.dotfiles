@@ -1,0 +1,11 @@
+[user]
+	email = 72044529+miyucomics@users.noreply.github.com
+	name = Miyu Nguyen
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
