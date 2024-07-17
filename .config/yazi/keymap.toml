@@ -2,6 +2,9 @@
 keymap = [
 	{ on = [ "<Esc>" ], run = "escape" },
 	{ on = [ "q" ],     run = "quit" },
+    { on = [ "Q" ],     run = "quit --no-cwd-file" },
+
+	{ on = [ "s" ], run = "search rg" },
 
 	{ on = [ "g", "g" ], run = "arrow -99999999", desc = "Move to top" },
 	{ on = [ "G" ], run = "arrow 99999999" },
@@ -64,8 +67,8 @@ keymap = [
 	{ on = [ "g", "d" ], run = "cd ~/Documents", desc = "Go to the documents directory" },
 	{ on = [ "g", "t" ], run = "cd /tmp",        desc = "Go to the temporary directory" },
 
-	{ on = [ "z" ],         run = "jump zoxide",                desc = "Jump to a directory using zoxide" },
-	{ on = [ "Z" ],         run = "jump fzf",                   desc = "Jump to a directory, or reveal a file using fzf" },
+	{ on = [ "z" ],         run = "plugin zoxide",                desc = "Jump to a directory using zoxide" },
+	{ on = [ "Z" ],         run = "plugin fzf",                   desc = "Jump to a directory, or reveal a file using fzf" },
 ]
 
 [select]
