@@ -1,7 +1,0 @@
-[pyprland]
-plugins = [
-    "magnify"
-]
-
-[magnify]
-duration = 10

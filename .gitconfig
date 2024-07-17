@@ -1,6 +1,6 @@
 [user]
 	email = 72044529+miyucomics@users.noreply.github.com
-	name = Miyu Nguyen
+	name = miyucomics
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
