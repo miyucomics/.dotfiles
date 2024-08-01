@@ -10,7 +10,7 @@ return {
         },
     },
     opts = {
-		highlight = "Normal:Normal,FloatBorder:FloatBorder",
+        highlight = "Normal:Normal,FloatBorder:FloatBorder",
         select_menu_item_commands = {
             v = { key = "<leader>sv", command = "vsplit" },
             h = { key = "<leader>sh", command = "split" },
