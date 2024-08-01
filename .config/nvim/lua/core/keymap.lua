@@ -1,4 +1,5 @@
 vim.keymap.set("n", "<c-s>", ":w<cr>", { silent = true })
+vim.keymap.set("n", "<c-c>", ":%y+<cr>", { silent = true })
 vim.keymap.set("n", "<leader>q", ":wqa<cr>", { silent = true })
 vim.keymap.set("n", "<leader>h", ":nohlsearch<cr>", { silent = true })
 
@@ -23,3 +24,12 @@ vim.keymap.set("n", "<c-h>", "<c-w>h", { silent = true })
 vim.keymap.set("n", "<c-l>", "<c-w>l", { silent = true })
 vim.keymap.set("n", "<c-j>", "<c-w>j", { silent = true })
 vim.keymap.set("n", "<c-k>", "<c-w>k", { silent = true })
+
+-- Switch buffers
+for i = 1, 9, 1 do
+    vim.keymap.set("n", string.format("<a-%s>", i), function()
+        local buffers = vim.api.nvim_list_bufs()
+        local id = buffers[i]
+        vim.api.nvim_set_current_buf(id)
+    end)
+end
