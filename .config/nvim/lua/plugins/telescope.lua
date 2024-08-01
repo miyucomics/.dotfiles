@@ -14,6 +14,9 @@ return {
                 require("telescope.builtin").live_grep()
             end,
         },
+        {
+            "<leader>ct", ":Telescope themer<cr>"
+        },
     },
     opts = {
         defaults = {
@@ -51,5 +54,6 @@ return {
             },
         }
         require("telescope").setup(opts)
+        require("telescope").load_extension("themer")
     end,
 }

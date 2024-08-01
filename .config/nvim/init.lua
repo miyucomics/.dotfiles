@@ -21,3 +21,5 @@ require("lazy").setup("plugins", {
         },
     },
 })
+
+require("themer").set_theme("catppuccin")
