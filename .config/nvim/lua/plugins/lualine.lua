@@ -5,7 +5,6 @@ return {
             icons_enabled = true,
             section_separators = "",
             component_separators = "",
-            theme = "catppuccin",
             disabled_filetypes = {
                 "alpha",
                 "TelescopePrompt",
