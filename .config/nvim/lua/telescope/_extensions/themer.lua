@@ -26,7 +26,7 @@ return require("telescope").register_extension({
                                 buffer = prompt_bufnr,
                                 callback = function()
                                     if action_state.get_selected_entry() then
-                                        require("themer").set_theme(action_state.get_selected_entry()[1])
+                                        require("custom.themer").set_theme(action_state.get_selected_entry()[1])
                                     end
                                 end,
                             })
@@ -34,12 +34,12 @@ return require("telescope").register_extension({
 
                         actions.move_selection_previous:replace(function()
                             action_set.shift_selection(prompt_bufnr, -1)
-                            require("themer").set_theme(action_state.get_selected_entry()[1])
+                            require("custom.themer").set_theme(action_state.get_selected_entry()[1])
                         end)
 
                         actions.move_selection_next:replace(function()
                             action_set.shift_selection(prompt_bufnr, 1)
-                            require("themer").set_theme(action_state.get_selected_entry()[1])
+                            require("custom.themer").set_theme(action_state.get_selected_entry()[1])
                         end)
 
                         actions.select_default:replace(function()

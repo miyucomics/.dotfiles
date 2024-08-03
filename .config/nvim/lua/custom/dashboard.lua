@@ -86,6 +86,7 @@ return function()
     vim.keymap.set("", "h", "<nop>", { buffer = true })
     vim.keymap.set("", "l", "<nop>", { buffer = true })
     vim.keymap.set("", "v", "<nop>", { buffer = true })
+    vim.keymap.set("", "q", ":q<cr>", { buffer = true })
 
     vim.keymap.set("", "k", function()
         local cur = vim.fn.line(".")
