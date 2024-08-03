@@ -8,6 +8,7 @@ vim.opt.showcmd = true
 vim.opt.laststatus = 3
 vim.opt.autowrite = true
 vim.opt.autoread = true
+vim.opt.fillchars = { eob = " " }
 
 vim.bo.softtabstop = 4
 vim.opt.tabstop = 4
