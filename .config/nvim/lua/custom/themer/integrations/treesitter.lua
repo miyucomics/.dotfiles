@@ -1,5 +1,5 @@
-local theme = require("themer").get_theme_tb("base_16")
-local base30 = require("themer").get_theme_tb("base_30")
+local theme = require("custom.themer").get_theme_tb("base_16")
+local base30 = require("custom.themer").get_theme_tb("base_30")
 
 return {
 

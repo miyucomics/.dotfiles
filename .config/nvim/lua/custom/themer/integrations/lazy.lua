@@ -1,5 +1,5 @@
-local base16 = require("themer").get_theme_tb("base_16")
-local base30 = require("themer").get_theme_tb("base_30")
+local base16 = require("custom.themer").get_theme_tb("base_16")
+local base30 = require("custom.themer").get_theme_tb("base_30")
 
 local generate_color = require("color_utils").change_hex_lightness
 

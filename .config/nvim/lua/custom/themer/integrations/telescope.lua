@@ -1,4 +1,4 @@
-local colors = require("themer").get_theme_tb("base_30")
+local colors = require("custom.themer").get_theme_tb("base_30")
 
 local hlgroups = {
     TelescopePromptPrefix = {
