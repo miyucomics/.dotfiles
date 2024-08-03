@@ -9,6 +9,7 @@ local function on_attach(_, bufnr)
 end
 
 local function on_init(client, _)
+    -- we have treesitter, so we'll turn this off for performance
     if client.supports_method("textDocument/semanticTokens") then
         client.server_capabilities.semanticTokensProvider = nil
     end
@@ -120,7 +121,6 @@ return {
             null_ls.setup({
                 sources = {
                     null_ls.builtins.formatting.stylua,
-                    null_ls.builtins.formatting.prettierd,
                     null_ls.builtins.completion.luasnip,
                 },
             })
