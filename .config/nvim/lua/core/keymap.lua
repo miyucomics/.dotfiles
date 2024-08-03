@@ -33,3 +33,18 @@ for i = 1, 9, 1 do
         vim.api.nvim_set_current_buf(id)
     end)
 end
+
+-- Terminals
+vim.keymap.set("n", "<leader>th", function()
+    require("term").new({ pos = "sp" })
+end)
+
+vim.keymap.set("n", "<leader>tv", function()
+    require("term").new({ pos = "vsp" })
+end)
+
+vim.keymap.set("", "<a-i>", function()
+    require("term").toggle({ pos = "float", id = "floatTerm" })
+end)
+
+vim.keymap.set("t", "<c-space>", "<c-\\><c-n>", { silent = true })
