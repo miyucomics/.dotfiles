@@ -23,3 +23,11 @@ require("lazy").setup("plugins", {
 })
 
 require("themer").set_theme("catppuccin")
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        if vim.fn.argc() == 0 then
+            require("dashboard")()
+        end
+    end,
+})
