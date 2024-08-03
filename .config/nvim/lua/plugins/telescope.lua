@@ -9,6 +9,7 @@ return {
         { "<leader>cm",       ":Telescope git_commits<cr>" },
         { "<leader>ct",       ":Telescope themer<cr>" },
         { "<leader>fb",       ":Telescope buffers<cr>" },
+        { "<leader>fo",       ":Telescope old_files<cr>" },
         { "<leader>fg",       ":Telescope live_grep<cr>" },
         { "<leader>fh",       ":Telescope help_tags<cr>" },
         { "<leader>fz",       ":Telescope current_buffer_fuzzy_find<cr>" },
