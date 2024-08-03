@@ -39,7 +39,7 @@ return {
             fields = { "kind", "abbr", "menu" },
             format = function(_, vim_item)
                 vim_item.menu = vim_item.kind
-                vim_item.kind = icons[vim_item.kind] .. " "
+                vim_item.kind = (icons[vim_item.kind] or "") .. " "
                 return vim_item
             end,
         },
@@ -51,6 +51,7 @@ return {
         sources = {
             { name = "nvim_lsp" },
             { name = "luasnip" },
+            { name = "crates" },
         },
         window = {
             completion = {

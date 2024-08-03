@@ -26,7 +26,6 @@ end
 Themer.sync_terminal = function()
     os.execute("printf '\\e]11;" .. current_theme.base_30.black .. "\\e\\\\'")
 
-    local colors = current_theme["base_16"]
     local term = {
         "base01",
         "base08",
@@ -47,20 +46,12 @@ Themer.sync_terminal = function()
     }
 
     for i = 0, 15 do
-        vim.g["terminal_color_" .. i] = colors[term[i + 1]]
+        vim.g["terminal_color_" .. i] = current_theme.base_16[term[i + 1]]
     end
 end
 
 Themer.get_theme_tb = function(property)
     return current_theme[property]
-end
-
-Themer.merge_tb = function(...)
-    return vim.tbl_deep_extend("force", ...)
-end
-
-Themer.override_theme = function(theme, name)
-    return theme
 end
 
 return Themer
