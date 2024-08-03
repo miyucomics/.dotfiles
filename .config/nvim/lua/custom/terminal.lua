@@ -28,11 +28,9 @@ local config = {
     },
 }
 
--- used for initially resizing terms
 vim.g.nvhterm = false
 vim.g.nvvterm = false
 
--------------------------- util funcs -----------------------------
 local function save_term_info(index, val)
     local terms_list = g.nvchad_terms
     terms_list[tostring(index)] = val
@@ -75,7 +73,6 @@ M.display = function(opts)
     vim.bo[opts.buf].buflisted = false
     vim.cmd("startinsert")
 
-    -- resize non floating wins initially + or only when they're toggleable
     if
         (opts.pos == "sp" and not vim.g.nvhterm)
         or (opts.pos == "vsp" and not vim.g.nvvterm)
@@ -100,7 +97,6 @@ local function create(opts)
     local buf_exists = opts.buf
     opts.buf = opts.buf or vim.api.nvim_create_buf(false, true)
 
-    -- handle cmd opt
     local shell = vim.o.shell
     local cmd = shell
 
@@ -120,7 +116,6 @@ local function create(opts)
     vim.g.nvvterm = opts.pos == "vsp"
 end
 
---------------------------- user api -------------------------------
 M.new = function(opts)
     create(opts)
 end
@@ -136,17 +131,14 @@ M.toggle = function(opts)
     end
 end
 
--- spawns term with *cmd & runs the *cmd if the keybind is run again
 M.runner = function(opts)
     local x = opts_to_id(opts.id)
     local clear_cmd = opts.clear_cmd or "clear; "
     opts.buf = x and x.buf or nil
 
-    -- if buf doesnt exist
     if x == nil then
         create(opts)
     else
-        -- window isnt visible
         if vim.fn.bufwinid(x.buf) == -1 then
             M.display(opts)
         end
@@ -164,7 +156,6 @@ M.runner = function(opts)
     end
 end
 
---------------------------- autocmds -------------------------------
 api.nvim_create_autocmd("TermClose", {
     callback = function(args)
         save_term_info(args.buf, nil)
