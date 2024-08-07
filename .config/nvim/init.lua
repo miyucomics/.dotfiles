@@ -22,7 +22,7 @@ require("lazy").setup("plugins", {
     },
 })
 
-require("custom.themer").set_theme("catppuccin")
+require("custom.themer").set_theme("catppuccin-mocha")
 
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
