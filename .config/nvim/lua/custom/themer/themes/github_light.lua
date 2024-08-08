@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#b1b3b5",
     light_grey = "#a6a8aa",
     red = "#DE2C2E", -- StatusBar (username)
-    baby_pink = "#ea4aaa",
     pink = "#b93a86",
     line = "#eaecee", -- for lines like vertsplit
     green = "#18654B",
-    vibrant_green = "#28a745",
-    nord_blue = "#0366d6", -- Mode indicator
     blue = "#0D7FDD",
     yellow = "#dbab09",
-    sun = "#f9c513",
     purple = "#8263EB",
-    dark_purple = "#5a32a3",
     teal = "#22839b",
     orange = "#d15704",
     cyan = "#0598bc",
@@ -61,14 +56,12 @@ M.polish_hl = {
     treesitter = {
         ["@punctuation.bracket"] = { fg = M.base_30.blue },
         ["@variable.member.key"] = { fg = M.base_30.white },
-        ["@constructor"] = { fg = M.base_30.vibrant_green },
-        ["@operator"] = { fg = M.base_30.orange },
+        ["@constructor"] = { fg = M.base_30.    ["@operator"] = { fg = M.base_30.orange },
     },
 
     syntax = {
         Constant = { fg = M.base_16.base07 },
-        Tag = { fg = M.base_30.vibrant_green },
-    },
+        Tag = { fg = M.base_30.},
 }
 
 return M

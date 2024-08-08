@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#6b6661",
     light_grey = "#75706b",
     red = "#B65C60",
-    baby_pink = "#CE9BCB",
     pink = "#B65C60",
     line = "#39342f", -- for lines like vertsplit
     green = "#86A3A3",
-    vibrant_green = "#99D59D",
-    nord_blue = "#88B3B2",
     blue = "#9AACCE",
     yellow = "#e3b865",
-    sun = "#EBC06D",
     purple = "#c47fd5",
-    dark_purple = "#b570c6",
     teal = "#697893",
     orange = "#E49B5D",
     firered = "#F17C64",
@@ -63,13 +58,11 @@ M.polish_hl = {
         ["@variable.member"] = { fg = M.base_30.white },
         ["@variable.member.key"] = { fg = M.base_30.white },
         ["@function.macro"] = {
-            fg = M.base_30.vibrant_green,
-        },
+            fg = M.base_30.    },
     },
 
     syntax = {
-        Include = { fg = M.base_30.vibrant_green },
-        Operator = { fg = M.base_30.firered },
+        Include = { fg = M.base_30.    Operator = { fg = M.base_30.firered },
         Boolean = { fg = M.base_30.purple },
     },
 }

@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#5c6673",
     light_grey = "#646e7b",
     red = "#c94f6d",
-    baby_pink = "#e26886",
     pink = "#d85e7c",
     line = "#2a3441",
     green = "#8ebaa4",
-    vibrant_green = "#6ad4d6",
     blue = "#719cd6",
-    nord_blue = "#86abdc",
     yellow = "#dbc074",
-    sun = "#e0c989",
     purple = "#baa1e2",
-    dark_purple = "#9d79d6",
     teal = "#5cc6c8",
     orange = "#fe9373",
     cyan = "#8be5e7",
@@ -58,8 +53,7 @@ M.base_16 = {
 M.polish_hl = {
     treesitter = {
         ["@variable.member.key"] = { fg = M.base_16.base05 },
-        ["@operator"] = { fg = M.base_30.dark_purple },
-        ["@keyword"] = { fg = M.base_30.teal },
+        ["@operator"] = { fg = M.base_30.    ["@keyword"] = { fg = M.base_30.teal },
         ["@variable.parameter"] = { fg = M.base_30.teal },
     },
 }

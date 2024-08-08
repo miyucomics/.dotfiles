@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#60656a",
     light_grey = "#6a6f74",
     red = "#ff7f8d", -- StatusBar (username)
-    baby_pink = "#ffa198",
     pink = "#ec6cb9",
     line = "#33383d",   -- for lines like vertsplit
     green = "#56d364",  -- StatusBar (file percentage)
-    vibrant_green = "#85e89d",
-    nord_blue = "#58a6ff", -- Mode indicator
     blue = "#79c0ff",
     yellow = "#ffdf5d",
-    sun = "#ffea7f",
     purple = "#d2a8ff",
-    dark_purple = "#bc8cff",
     teal = "#39c5cf",
     orange = "#ffab70",
     cyan = "#56d4dd",
@@ -62,8 +57,7 @@ M.polish_hl = {
         ["@punctuation.bracket"] = { fg = M.base_30.orange },
         ["@string"] = { fg = M.base_30.white },
         ["@variable.member.key"] = { fg = M.base_30.white },
-        ["@constructor"] = { fg = M.base_30.vibrant_green },
-        ["@tag.attribute"] = { link = "@function.method" },
+        ["@constructor"] = { fg = M.base_30.    ["@tag.attribute"] = { link = "@function.method" },
     },
 }
 

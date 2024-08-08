@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#53535c",
     light_grey = "#5c5c65",
     red = "#d8616b",
-    baby_pink = "#D27E99",
     pink = "#c8748f",
     line = "#31313a", -- for lines like vertsplit
     green = "#98BB6C",
-    vibrant_green = "#a3c677",
-    nord_blue = "#7E9CD8",
     blue = "#7FB4CA",
     yellow = "#FF9E3B",
-    sun = "#FFA066",
     purple = "#a48ec7",
-    dark_purple = "#9c86bf",
     teal = "#7AA89F",
     orange = "#fa9b61",
     cyan = "#A3D4D5",
@@ -66,8 +61,7 @@ M.polish_hl = {
     },
 
     syntax = {
-        Number = { fg = M.base_30.baby_pink },
-    },
+        Number = { fg = M.base_30.},
 }
 
 M.type = "dark"

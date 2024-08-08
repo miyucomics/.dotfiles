@@ -15,19 +15,14 @@ M.base_30 = {
     one_bg = "#F2E6D4",
     black = "#FFF7ED",
     darker_black = "#f5ede3",
-    baby_pink = "#CA736C",
     blue = "#6E8DD5",
     cyan = "#00A0BA",
-    dark_purple = "#806db8",
     green = "#3ea57b",
-    nord_blue = "#5794D0",
     orange = "#BA823A",
     pink = "#CA7081",
     purple = "#ac78bd",
     red = "#ca7081",
-    sun = "#A38F2D",
     teal = "#22839b",
-    vibrant_green = "#46A473",
     yellow = "#92963a",
     line = "#ebe3d9",
     statusline_bg = "#f5ede3",
@@ -66,8 +61,7 @@ M.polish_hl = {
 
     syntax = {
         Constant = { fg = M.base_30.red },
-        Include = { fg = M.base_30.dark_purple },
-    },
+        Include = { fg = M.base_30.},
 }
 
 M.type = "light"

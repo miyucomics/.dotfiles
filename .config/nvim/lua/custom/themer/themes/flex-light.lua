@@ -17,17 +17,12 @@ M.base_30 = {
     grey_fg2 = "#a3a19a",
     light_grey = "#94928b",
     red = "#D14D41",
-    baby_pink = "#d574a6",
     pink = "#CE5D97",
     line = "#d6d4ca", -- for lines like vertsplit
     green = "#879A39",
-    vibrant_green = "#66800B",
-    nord_blue = "#4385BE",
     blue = "#4385BE",
     yellow = "#D0A215",
-    sun = "#d2a721",
     purple = "#8B7EC8",
-    dark_purple = "#8376bc",
     teal = "#008080",
     orange = "#DA702C",
     cyan = "#3AA99F",
@@ -74,8 +69,7 @@ M.polish_hl = {
     },
 
     telescope = {
-        TelescopeMatching = { fg = M.base_30.dark_purple, bg = M.base_30.one_bg },
-    },
+        TelescopeMatching = { fg = M.base_30.},
 }
 
 M.type = "light"

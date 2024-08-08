@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#606281",
     light_grey = "#67698a",
     red = "#ec6a88",
-    baby_pink = "#ff8cbe",
     pink = "#ff7eb6",
     line = "#383747",
     green = "#3FDAA4",
-    vibrant_green = "#08bdba",
-    nord_blue = "#78a9ff",
     blue = "#78a9ff",
     yellow = "#e1c697",
-    sun = "#E8D4B0",
     purple = "#be95ff",
-    dark_purple = "#936FDC",
     teal = "#09deda",
     orange = "#efb993",
     cyan = "#6be6e6",
@@ -59,8 +54,7 @@ M.base_16 = {
 M.polish_hl = {
     syntax = {
         Conditional = {
-            fg = M.base_30.nord_blue,
-        },
+            fg = M.base_30.    },
 
         Tag = {
             fg = M.base_30.red,

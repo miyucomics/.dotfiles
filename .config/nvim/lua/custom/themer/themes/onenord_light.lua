@@ -13,17 +13,12 @@ M.base_30 = {
     grey_fg2 = "#959ba6",
     light_grey = "#8b919c",
     red = "#a3454e",
-    baby_pink = "#ae5059",
     pink = "#c56770",
     line = "#acb2bd", -- for lines like vertsplit
     green = "#75905e",
-    vibrant_green = "#809b69",
-    nord_blue = "#5b7b9b",
     blue = "#3f5f7f",
     yellow = "#c18401",
-    sun = "#dea95f",
     purple = "#9c87c7",
-    dark_purple = "#927dbd",
     teal = "#395979",
     orange = "#b46b54",
     cyan = "#6181a1",
@@ -64,8 +59,7 @@ M.polish_hl = {
     },
 
     treesitter = {
-        ["@punctuation.bracket"] = { fg = M.base_30.nord_blue },
-    },
+        ["@punctuation.bracket"] = { fg = M.base_30.},
 
     defaults = { FloatBorder = { fg = M.base_16.base05 } },
 

@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#5D5E58",
     light_grey = "#64655F",
     red = "#e36d76",
-    baby_pink = "#f98385",
     pink = "#f36d76",
     line = "#363942", -- for lines like vertsplit
     green = "#96c367",
-    vibrant_green = "#99c366",
-    nord_blue = "#81A1C1",
     blue = "#51afef",
     yellow = "#e6c181",
-    sun = "#fce668",
     purple = "#c885d7",
-    dark_purple = "#b26fc1",
     teal = "#34bfd0",
     orange = "#d39467",
     cyan = "#41afef",
@@ -59,10 +54,8 @@ M.polish_hl = {
     treesitter = {
         ["parameter"] = { fg = M.base_30.blue },
         ["@variable.member.key"] = { fg = M.base_30.white },
-        ["@string"] = { fg = M.base_30.sun },
-        ["@boolean"] = { fg = M.base_16.base09 },
-        ["@punctuation.bracket"] = { fg = M.base_30.sun },
-        ["@operator"] = { fg = M.base_30.red },
+        ["@string"] = { fg = M.base_30.    ["@boolean"] = { fg = M.base_16.base09 },
+        ["@punctuation.bracket"] = { fg = M.base_30.    ["@operator"] = { fg = M.base_30.red },
     },
 
     syntax = {

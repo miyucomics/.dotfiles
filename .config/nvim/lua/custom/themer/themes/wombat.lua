@@ -16,17 +16,12 @@ M.base_30 = {
     grey_fg2 = "#5a5a5a",
     light_grey = "#646464",
     red = "#FF8F7E",
-    baby_pink = "#f58eff",
     pink = "#e780f8",
     line = "#353535",
     green = "#AEE474",
-    vibrant_green = "#95e454",
-    nord_blue = "#8dbdfb",
     blue = "#88B8F6",
     yellow = "#efdeab",
-    sun = "#feedba",
     purple = "#dc8cff",
-    dark_purple = "#c878f0",
     teal = "#7EB6BC",
     orange = "#FFCC66",
     cyan = "#90fdf8",
@@ -57,8 +52,7 @@ M.base_16 = {
 
 M.polish_hl = {
     treesitter = {
-        ["@punctuation.bracket"] = { fg = M.base_30.sun },
-    },
+        ["@punctuation.bracket"] = { fg = M.base_30.},
 }
 
 M.type = "dark"
