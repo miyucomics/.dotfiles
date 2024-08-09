@@ -26,7 +26,6 @@ M.base_30 = {
     orange = "#ffab70",
     cyan = "#56d4dd",
     statusline_bg = "#2b3035",
-    lightbg = "#383d42",
     pmenu_bg = "#58a6ff", -- Command bar suggestions
     folder_bg = "#58a6ff",
 }

@@ -4,17 +4,17 @@
 local M = {}
 
 M.base_30 = {
-    black = "#191724",
+    black = "#232136",
     darker_black = "#13111e",
     white = "#e0def4",
-    black2 = "#1f1d2a",
-    one_bg = "#262431",
-    one_bg2 = "#2d2b38",
-    one_bg3 = "#353340",
-    grey = "#3f3d4a",
-    grey_fg = "#474552",
-    grey_fg2 = "#514f5c",
-    light_grey = "#5d5b68",
+    black2 = "#2a273f",
+    one_bg = "#393552",
+    one_bg2 = "#44415a",
+    one_bg3 = "#56526e",
+    grey = "#6e6a86",
+    grey_fg = "#6e6a86",
+    grey_fg2 = "#6e6a86",
+    light_grey = "#908caa",
     red = "#eb6f92",
     pink = "#ff83a6",
     line = "#2e2c39",
@@ -31,22 +31,22 @@ M.base_30 = {
 }
 
 M.base_16 = {
-    base00 = "#191724",
-    base01 = "#1f1d2e",
-    base02 = "#26233a",
+    base00 = "#232136",
+    base01 = "#2a273f",
+    base02 = "#393552",
     base03 = "#6e6a86",
     base04 = "#908caa",
     base05 = "#e0def4",
     base06 = "#e0def4",
-    base07 = "#524f67",
+    base07 = "#56526e",
     base08 = "#eb6f92",
     base09 = "#f6c177",
-    base0A = "#ebbcba",
-    base0B = "#31748f",
+    base0A = "#ea9a97",
+    base0B = "#3e8fb0",
     base0C = "#9ccfd8",
     base0D = "#c4a7e7",
     base0E = "#f6c177",
-    base0F = "#524f67",
+    base0F = "#56526e",
 }
 
 M.type = "dark"

@@ -10,7 +10,6 @@ return {
     ["@variable.member.key"] = { fg = theme.base08 },
 
     ["@module"] = { fg = theme.base08 },
-    -- ["@module.builtin"] = { fg = theme.base08 },
 
     ["@constant"] = { fg = theme.base08 },
     ["@constant.builtin"] = { fg = theme.base09 },
@@ -20,7 +19,6 @@ return {
     ["@string.regex"] = { fg = theme.base0C },
     ["@string.escape"] = { fg = theme.base0C },
     ["@character"] = { fg = theme.base08 },
-    -- ["@character.special"] = { fg = theme.base08 },
     ["@number"] = { fg = theme.base09 },
     ["@number.float"] = { fg = theme.base09 },
 

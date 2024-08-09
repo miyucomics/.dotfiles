@@ -26,7 +26,6 @@ M.base_30 = {
     orange = "#d39467",
     cyan = "#41afef",
     statusline_bg = "#2F302A",
-    lightbg = "#3E3F39",
     pmenu_bg = "#99c366",
     folder_bg = "#61afef",
 }
