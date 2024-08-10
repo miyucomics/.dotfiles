@@ -53,10 +53,11 @@ M.type = "dark"
 
 M.polish_hl = {
     syntax = {
-        Operator = { fg = M.base_30.},
-
+        Operator = { fg = M.base_30.blue },
+    },
     treesitter = {
-        ["@operator"] = { fg = M.base_30.},
+        ["@operator"] = { fg = M.base_30.blue },
+    },
 }
 
 return M

@@ -17,7 +17,7 @@ M.base_30 = {
     light_grey = "#626262",
     red = "#D16969",
     pink = "#bb7cb6",
-    line = "#2e2e2e", -- for lines like vertsplit
+    line = "#2e2e2e",
     green = "#B5CEA8",
     green1 = "#4EC994",
     blue = "#569CD6",
@@ -32,7 +32,6 @@ M.base_30 = {
 }
 
 M.base_16 = {
-    --author of this template Tomas Iser, @tomasiser on github,
     base00 = "#1E1E1E",
     base01 = "#262626",
     base02 = "#303030",

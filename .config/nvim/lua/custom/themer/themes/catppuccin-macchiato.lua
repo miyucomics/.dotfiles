@@ -17,7 +17,6 @@ M.base_30 = {
 	pink = "#f5bde6",
 	line = "#494d64",
 	green = "#a6da95",
-	vibrant_green = "#a6da95",
 	nord_blue = "#8bd5ca",
 	blue = "#8aadf4",
 	yellow = "#eed49f",

@@ -6,9 +6,9 @@ local M = {}
 M.base_30 = {
     white = "#f2f4f8",
     darker_black = "#0f0f0f",
-    black = "#161616", --  nvim bg
+    black = "#161616",
     black2 = "#202020",
-    one_bg = "#2a2a2a", -- real bg of onedark
+    one_bg = "#2a2a2a",
     one_bg2 = "#343434",
     one_bg3 = "#3c3c3c",
     grey = "#464646",
@@ -17,7 +17,7 @@ M.base_30 = {
     light_grey = "#5f5f5f",
     red = "#ee5396",
     pink = "#be95ff",
-    line = "#383747", -- for lines like vertsplit
+    line = "#383747",
     green = "#42be65",
     blue = "#33b1ff",
     yellow = "#FAE3B0",
@@ -52,7 +52,8 @@ M.base_16 = {
 
 M.polish_hl = {
     syntax = {
-        Conditional = { fg = M.base_30.    Tag = { fg = M.base_30.white },
+        Conditional = { fg = M.base_30.blue },
+        Tag = { fg = M.base_30.white },
     },
 }
 

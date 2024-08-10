@@ -1,15 +1,14 @@
 -- Credits to original theme https://github.com/kepano/flexoki/
 -- This is a modified version of it
 
--- return colors
 local M = {}
 
 M.base_30 = {
     white = "#2a2929",
     darker_black = "#f7f4e9",
-    black = "#FFFCF0", --  nvim bg
+    black = "#FFFCF0",
     black2 = "#f2efe4",
-    one_bg = "#ebe8dd", -- real bg of onedark
+    one_bg = "#ebe8dd",
     one_bg2 = "#d6d4ca",
     one_bg3 = "#c7c5bb",
     grey = "#b8b5ad",
@@ -25,7 +24,7 @@ M.base_30 = {
     teal = "#519ABA",
     orange = "#BC5215",
     cyan = "#24837B",
-    line = "#d6d4ca", -- for lines like vertsplit
+    line = "#d6d4ca",
     statusline_bg = "#f7f4e9",
     pmenu_bg = "#3AA99F",
     folder_bg = "#6F6E69",
@@ -42,7 +41,8 @@ M.base_16 = {
     base07 = "#c8ccd4",
     base08 = M.base_30.red,
     base09 = M.base_30.orange,
-    base0A = M.base_30.base0B = M.base_30.green,
+    base0A = M.base_30.purple,
+    base0B = M.base_30.green,
     base0C = M.base_30.cyan,
     base0D = M.base_30.blue,
     base0E = M.base_30.yellow,
@@ -67,7 +67,8 @@ M.polish_hl = {
     },
 
     telescope = {
-        TelescopeMatching = { fg = M.base_30.},
+        TelescopeMatching = { fg = M.base_30.purple, bg = M.base_30.one_bg },
+    }
 }
 
 M.type = "light"

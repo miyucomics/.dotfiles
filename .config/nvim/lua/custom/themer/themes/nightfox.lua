@@ -8,7 +8,7 @@ M.base_30 = {
     darker_black = "#121c29",
     black = "#192330",
     black2 = "#202a37",
-    one_bg = "#252f3c", -- real bg of onedark
+    one_bg = "#252f3c",
     one_bg2 = "#313b48",
     one_bg3 = "#3d4754",
     grey = "#495360",
@@ -52,7 +52,8 @@ M.base_16 = {
 M.polish_hl = {
     treesitter = {
         ["@variable.member.key"] = { fg = M.base_16.base05 },
-        ["@operator"] = { fg = M.base_30.    ["@keyword"] = { fg = M.base_30.teal },
+        ["@operator"] = { fg = M.base_30.purple },
+        ["@keyword"] = { fg = M.base_30.teal },
         ["@variable.parameter"] = { fg = M.base_30.teal },
     },
 }

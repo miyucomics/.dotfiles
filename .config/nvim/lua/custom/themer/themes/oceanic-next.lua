@@ -4,9 +4,9 @@
 local M = {}
 
 M.base_30 = {
-    white = "#D8DEE9", -- confirmed
+    white = "#D8DEE9",
     darker_black = "#15252e",
-    black = "#1B2B34", --  nvim bg
+    black = "#1B2B34",
     black2 = "#21313a",
     one_bg = "#25353e",
     one_bg2 = "#2e3e47",
@@ -17,7 +17,7 @@ M.base_30 = {
     light_grey = "#5f6f78",
     red = "#EC5F67",
     pink = "#ffafb7",
-    line = "#2a3a43", -- for lines like vertsplit
+    line = "#2a3a43",
     green = "#99C794",
     blue = "#6699CC",
     yellow = "#FAC863",
@@ -30,7 +30,6 @@ M.base_30 = {
     folder_bg = "#598cbf",
 }
 
--- Base16 colors taken from:
 M.base_16 = {
     base00 = "#1B2B34",
     base01 = "#343D46",

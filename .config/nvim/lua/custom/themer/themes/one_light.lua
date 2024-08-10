@@ -6,9 +6,9 @@ local M = {}
 M.base_30 = {
     white = "#54555b",
     darker_black = "#efeff0",
-    black = "#fafafa", --  nvim bg
+    black = "#fafafa",
     black2 = "#EAEAEB",
-    one_bg = "#dadadb", -- real bg of onedark
+    one_bg = "#dadadb",
     one_bg2 = "#d4d4d5",
     one_bg3 = "#cccccd",
     grey = "#b7b7b8",
@@ -17,7 +17,7 @@ M.base_30 = {
     light_grey = "#a2a2a3",
     red = "#d84a3d",
     pink = "#ff75a0",
-    line = "#e2e2e2", -- for lines like vertsplit
+    line = "#e2e2e2",
     green = "#50a14f",
     blue = "#4078f2",
     yellow = "#c18401",
@@ -58,7 +58,8 @@ M.polish_hl = {
     },
 
     treesitter = {
-        ["@punctuation.bracket"] = { fg = M.base_30.},
+        ["@punctuation.bracket"] = { fg = M.base_30.blue },
+    },
 
     defaults = {
         FloatBorder = { fg = M.base_16.base05 },

@@ -6,7 +6,7 @@ local M = {}
 M.base_30 = {
     white = "#272f35",
     darker_black = "#f5efde",
-    black = "#fff9e8", --  nvim bg
+    black = "#fff9e8",
     black2 = "#F0EAD9",
     one_bg = "#E0DAC9",
     one_bg2 = "#D1CBBA",
@@ -17,7 +17,7 @@ M.base_30 = {
     light_grey = "#857F6E",
     red = "#c85552",
     pink = "#ef6590",
-    line = "#e8e2d1", -- for lines like vertsplit
+    line = "#e8e2d1",
     green = "#5da111",
     blue = "#3a94c5",
     yellow = "#dfa000",
@@ -70,7 +70,6 @@ M.polish_hl = {
     defaults = {
         Pmenu = { bg = M.base_30.black2 },
     },
-    -- IndentBlanklineContextStart = { bg = M.base_30.black2 },
 
     statusline = {
         St_pos_text = { fg = M.base_30.white },

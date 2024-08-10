@@ -60,7 +60,8 @@ M.polish_hl = {
 
     syntax = {
         Constant = { fg = M.base_30.red },
-        Include = { fg = M.base_30.},
+        Include = { fg = M.base_30.purple },
+    }
 }
 
 M.type = "light"
