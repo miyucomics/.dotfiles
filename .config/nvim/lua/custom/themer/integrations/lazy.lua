@@ -1,8 +1,6 @@
 local base16 = require("custom.themer").query_theme("base_16")
 local base30 = require("custom.themer").query_theme("base_30")
 
-local generate_color = require("color_utils").change_hex_lightness
-
 return {
     LazyReasonPlugin = { fg = base30.red },
     LazyValue = { fg = base30.teal },
@@ -30,8 +28,8 @@ return {
     },
 
     LazyButton = {
-        bg = base30.one_bg,
-        fg = generate_color(base30.light_grey, vim.o.bg == "dark" and 10 or -20),
+        bg = base30.black2,
+        fg = base30.light_grey,
     },
 
     LazyH2 = {

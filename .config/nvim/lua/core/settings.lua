@@ -20,8 +20,5 @@ vim.opt.autoindent = true
 
 vim.opt.scrolloff = 5
 
-vim.wo.number = true
-vim.wo.relativenumber = true
-
 vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
