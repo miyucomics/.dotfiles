@@ -33,7 +33,7 @@ Themer.polish_themes = function()
 end
 
 Themer.sync_terminal = function()
-	os.execute("printf '\\e]11;" .. current_theme.base_30.black .. "\\e\\\\'")
+    vim.api.nvim_exec_autocmds("ColorScheme", {})
 
 	local term = {
 		"base01",
