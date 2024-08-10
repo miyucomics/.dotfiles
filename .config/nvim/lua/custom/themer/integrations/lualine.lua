@@ -1,4 +1,4 @@
-local base30 = require("custom.themer").get_theme_tb("base_30")
+local base30 = require("custom.themer").query_theme("base_30")
 
 return {
     lualine_a_insert = { fg = base30.black, bg = base30.green },

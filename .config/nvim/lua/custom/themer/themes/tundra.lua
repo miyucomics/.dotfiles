@@ -52,20 +52,16 @@ M.base_16 = {
 M.type = "dark"
 
 M.polish_hl = {
-	treesitter = {
-		["@constructor"] = { fg = M.base_30.cyan },
-		["@keyword"] = { fg = M.base_30.red },
-		["@function.method.call"] = { fg = M.base_30.cyan },
-		["@function.call"] = { fg = M.base_30.cyan },
-		["@function.builtin"] = { fg = M.base_30.orange },
-	},
-	syntax = {
-		Constant = { fg = M.base_30.orange },
-		Conditional = { fg = M.base_30.pink },
-		Repeat = { fg = M.base_30.pink },
-		Type = { fg = M.base_30.pink },
-		Operator = { fg = M.base_30.pink },
-	},
+	["@constructor"] = { fg = M.base_30.cyan },
+	["@keyword"] = { fg = M.base_30.red },
+	["@function.method.call"] = { fg = M.base_30.cyan },
+	["@function.call"] = { fg = M.base_30.cyan },
+	["@function.builtin"] = { fg = M.base_30.orange },
+	Constant = { fg = M.base_30.orange },
+	Conditional = { fg = M.base_30.pink },
+	Repeat = { fg = M.base_30.pink },
+	Type = { fg = M.base_30.pink },
+	Operator = { fg = M.base_30.pink },
 }
 
 return M

@@ -50,21 +50,17 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-	syntax = {
-		Keyword = { fg = M.base_30.cyan },
-		Include = { fg = M.base_30.yellow },
-		Tag = { fg = M.base_30.blue },
-	},
-	treesitter = {
-		["@keyword"] = { fg = M.base_30.cyan },
-		["@variable.parameter"] = { fg = M.base_30.pink },
-		["@tag.attribute"] = { fg = M.base_30.orange },
-		["@tag"] = { fg = M.base_30.blue },
-		["@string"] = { fg = M.base_30.green },
-		["@string.special.url"] = { fg = M.base_30.green },
-		["@markup.link.url"] = { fg = M.base_30.green },
-		["@punctuation.bracket"] = { fg = M.base_30.yellow },
-	},
+	Keyword = { fg = M.base_30.cyan },
+	Include = { fg = M.base_30.yellow },
+	Tag = { fg = M.base_30.blue },
+	["@keyword"] = { fg = M.base_30.cyan },
+	["@variable.parameter"] = { fg = M.base_30.pink },
+	["@tag.attribute"] = { fg = M.base_30.orange },
+	["@tag"] = { fg = M.base_30.blue },
+	["@string"] = { fg = M.base_30.green },
+	["@string.special.url"] = { fg = M.base_30.green },
+	["@markup.link.url"] = { fg = M.base_30.green },
+	["@punctuation.bracket"] = { fg = M.base_30.yellow },
 }
 
 M.type = "dark"

@@ -1,4 +1,4 @@
-local colors = require("custom.themer").get_theme_tb("base_30")
+local colors = require("custom.themer").query_theme("base_30")
 local colorize = require("color_utils").change_hex_lightness
 
 return {

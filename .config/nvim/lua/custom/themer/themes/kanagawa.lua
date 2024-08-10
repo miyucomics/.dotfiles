@@ -50,18 +50,13 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-	treesitter = {
-		["@keyword.import"] = { fg = M.base_30.purple },
-		["@uri"] = { fg = M.base_30.blue },
-		["@tag.delimiter"] = { fg = M.base_30.red },
-		["@variable.member.key"] = { fg = M.base_30.white },
-		["@punctuation.bracket"] = { fg = M.base_30.pmenu_bg },
-		["@punctuation.delimiter"] = { fg = M.base_30.white },
-	},
-
-	syntax = {
-		Number = { fg = M.base_30.pink },
-	},
+	["@keyword.import"] = { fg = M.base_30.purple },
+	["@uri"] = { fg = M.base_30.blue },
+	["@tag.delimiter"] = { fg = M.base_30.red },
+	["@variable.member.key"] = { fg = M.base_30.white },
+	["@punctuation.bracket"] = { fg = M.base_30.pmenu_bg },
+	["@punctuation.delimiter"] = { fg = M.base_30.white },
+	Number = { fg = M.base_30.pink },
 }
 
 M.type = "dark"

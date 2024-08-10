@@ -51,14 +51,8 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-	syntax = {
-		Conditional = {
-			fg = M.base_30.blue,
-		},
-		Tag = {
-			fg = M.base_30.red,
-		},
-	},
+	Conditional = { fg = M.base_30.blue },
+	Tag = { fg = M.base_30.red },
 }
 
 M.type = "dark"

@@ -1,4 +1,4 @@
-local colors = require("custom.themer").get_theme_tb("base_30")
+local colors = require("custom.themer").query_theme("base_30")
 
 return {
     MasonHeader = { bg = colors.red, fg = colors.black },

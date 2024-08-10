@@ -1,5 +1,5 @@
-local colors = require("custom.themer").get_theme_tb("base_30")
-local theme = require("custom.themer").get_theme_tb("base_16")
+local colors = require("custom.themer").query_theme("base_30")
+local theme = require("custom.themer").query_theme("base_16")
 
 local defaults = {
     Added = { fg = colors.green },

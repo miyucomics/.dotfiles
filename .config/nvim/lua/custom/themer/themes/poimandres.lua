@@ -49,40 +49,30 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-	treesitter = {
-		["@variable"] = { fg = M.base_30.ogwhite },
-		["@variable.builtin"] = { fg = M.base_30.purple },
-		["@function.call"] = { fg = M.base_30.purple },
-		["@keyword.return"] = { fg = M.base_30.green },
-		["@operator"] = { fg = M.base_30.blue },
-		["@keyword.operator"] = { fg = M.base_30.seablue },
-		["@constant.builtin"] = { fg = M.base_30.seablue },
-		["@constant"] = { fg = M.base_30.white },
-		["@constructor"] = { fg = M.base_30.grey_fg },
-		["@property"] = { fg = M.base_30.seablue },
-		["@punctuation.delimiter"] = { fg = M.base_30.seablue },
-		["@markup.list"] = { fg = M.base_30.purple },
-		["@punctuation.bracket"] = { fg = M.base_30.purple },
-		["@type.builtin"] = { link = "Boolean" },
-		["@tag.attribute"] = { fg = M.base_30.purple, italic = true, link = "" },
-		["Label"] = { fg = M.base_30.seablue },
-		["@constructor.tsx"] = { link = "Tag" },
-	},
-
-	telescope = {
-		TelescopeMatching = { fg = M.base_30.teal },
-	},
-
-	cmp = {
-		CmpItemAbbr = { fg = M.base_30.purple },
-		CmpItemAbbrMatch = { fg = M.base_30.purple },
-		CmpSel = { bg = M.base_30.one_bg2, link = "" },
-	},
-
-	syntax = {
-		Include = { fg = M.base_30.blue },
-		Type = { fg = M.base_30.purple },
-	},
+	["@variable"] = { fg = M.base_30.ogwhite },
+	["@variable.builtin"] = { fg = M.base_30.purple },
+	["@function.call"] = { fg = M.base_30.purple },
+	["@keyword.return"] = { fg = M.base_30.green },
+	["@function"] = { fg = M.base_30.teal },
+	["@operator"] = { fg = M.base_30.blue },
+	["@keyword.operator"] = { fg = M.base_30.seablue },
+	["@constant.builtin"] = { fg = M.base_30.seablue },
+	["@constant"] = { fg = M.base_30.white },
+	["@constructor"] = { fg = M.base_30.grey_fg },
+	["@property"] = { fg = M.base_30.seablue },
+	["@punctuation.delimiter"] = { fg = M.base_30.seablue },
+	["@markup.list"] = { fg = M.base_30.purple },
+	["@punctuation.bracket"] = { fg = M.base_30.purple },
+	["@type.builtin"] = { link = "Boolean" },
+	["@tag.attribute"] = { fg = M.base_30.purple, italic = true, link = "" },
+	["Label"] = { fg = M.base_30.seablue },
+	["@constructor.tsx"] = { link = "Tag" },
+	TelescopeMatching = { fg = M.base_30.teal },
+	CmpItemAbbr = { fg = M.base_30.purple },
+	CmpItemAbbrMatch = { fg = M.base_30.purple },
+	CmpSel = { bg = M.base_30.one_bg2, link = "" },
+	Include = { fg = M.base_30.blue },
+	Type = { fg = M.base_30.purple },
 }
 
 M.type = "dark"
