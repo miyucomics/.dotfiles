@@ -13,6 +13,18 @@ return {
 		},
 	},
 	opts = {
+		win_options = {
+			wrap = false,
+			signcolumn = "no",
+			cursorcolumn = false,
+			foldcolumn = "0",
+			spell = false,
+			list = false,
+			conceallevel = 3,
+			concealcursor = "nvic",
+            number = false,
+            relativenumber = false,
+		},
 		skip_confirm_for_simple_edits = true,
 		use_default_keymaps = false,
 		keymaps = {
