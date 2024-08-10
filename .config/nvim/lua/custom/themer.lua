@@ -26,11 +26,9 @@ end
 
 Themer.polish_themes = function()
 	if current_theme["polish_hl"] ~= nil then
-		for _, cat in pairs(current_theme["polish_hl"]) do
-			for key, value in pairs(cat) do
-				vim.api.nvim_set_hl(0, key, value)
-			end
-		end
+        for key, value in pairs(current_theme["polish_hl"]) do
+            vim.api.nvim_set_hl(0, key, value)
+        end
 	end
 end
 
@@ -61,7 +59,7 @@ Themer.sync_terminal = function()
 	end
 end
 
-Themer.get_theme_tb = function(property)
+Themer.query_theme = function(property)
 	return current_theme[property]
 end
 
