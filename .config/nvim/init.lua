@@ -25,4 +25,5 @@ require("lazy").setup("plugins", {
 	},
 })
 
+require("custom.congratulator")
 require("custom.themer").set_theme("catppuccin-mocha")

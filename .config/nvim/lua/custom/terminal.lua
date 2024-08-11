@@ -1,3 +1,5 @@
+-- taken from nvchad's ui
+
 local M = {}
 
 vim.g.nvchad_terms = {}
