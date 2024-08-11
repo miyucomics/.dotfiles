@@ -7,6 +7,7 @@ return {
             component_separators = "",
             disabled_filetypes = {
                 "dashboard",
+                "lazy",
                 "TelescopePrompt",
                 "terminal",
             },
