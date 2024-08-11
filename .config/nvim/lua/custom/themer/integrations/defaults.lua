@@ -27,7 +27,7 @@ local defaults = {
 
     -- floating windows
     FloatBorder = { fg = colors.blue },
-    NormalFloat = { bg = colors.darker_black },
+    NormalFloat = { bg = theme.base00 },
 
     NvimInternalError = { fg = colors.red },
     WinSeparator = { fg = colors.line },
