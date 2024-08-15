@@ -2,6 +2,8 @@ require("core.settings")
 require("core.keymap")
 require("core.bootstrap")
 
+require("custom.themer").set_theme("catppuccin-mocha")
+
 require("lazy").setup("plugins", {
 	ui = {
 		backdrop = 100,
@@ -24,6 +26,3 @@ require("lazy").setup("plugins", {
 		},
 	},
 })
-
-require("custom.congratulator")
-require("custom.themer").set_theme("catppuccin-mocha")
