@@ -30,8 +30,8 @@ keymap = [
 	{ on = [ "P" ], run = "paste --force" },
 	{ on = [ "a" ], run = "create" },
 	{ on = [ "r" ], run = "rename" },
-	{ on = [ ";" ], run = "shell" },
-	{ on = [ ":" ], run = "shell --block" },
+	{ on = [ ";" ], run = "shell --interactive" },
+	{ on = [ ":" ], run = "shell --block --interactive" },
 	{ on = [ "." ], run = "hidden toggle" },
 
 	{ on = [ "/" ], run = "find --smart" },
