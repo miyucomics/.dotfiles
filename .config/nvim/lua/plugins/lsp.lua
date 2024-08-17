@@ -59,6 +59,7 @@ return {
 				capabilities = capabilities,
 				on_init = on_init,
 				handlers = handlers,
+				filetypes = { "lua" },
 
 				settings = {
 					Lua = {
@@ -91,6 +92,7 @@ return {
 				capabilities = capabilities,
 				on_init = on_init,
 				handlers = handlers,
+				filetypes = { "rust" },
 
 				root_dir = utils.root_pattern("Cargo.toml"),
 				settings = {
