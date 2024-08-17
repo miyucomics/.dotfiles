@@ -1,6 +1,9 @@
-function Status:render() return {} end
+local old_layout = Tab.layout
 
-local old_render = Manager.render
-function Manager:render(area)
-	return old_render(self, ui.Rect { x = area.x, y = area.y, w = area.w, h = area.h + 1 })
+Status.render = function()
+	return {}
+end
+Tab.layout = function(self, ...)
+	self._area = ui.Rect({ x = self._area.x, y = self._area.y, w = self._area.w, h = self._area.h + 1 })
+	return old_layout(self, ...)
 end
