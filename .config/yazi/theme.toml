@@ -21,7 +21,9 @@ rules = [
 ]
 
 [icon]
-rules = [
-    { name = "*", text = "" },
-    { name = "*/", text = "" }
+dirs = [
+    { name = "*", text = "" }
+]
+files = [
+    { name = "*", text = "" }
 ]
