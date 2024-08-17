@@ -2,184 +2,184 @@ local colors = require("custom.themer").query_theme("base_30")
 local theme = require("custom.themer").query_theme("base_16")
 
 local defaults = {
-    Added = { fg = colors.green },
-    Removed = { fg = colors.red },
-    Changed = { fg = colors.yellow },
+	Added = { fg = colors.green },
+	Removed = { fg = colors.red },
+	Changed = { fg = colors.yellow },
 
-    MatchWord = {
-        bg = colors.grey,
-        fg = colors.white,
-    },
+	MatchWord = {
+		bg = colors.grey,
+		fg = colors.white,
+	},
 
-    Pmenu = { bg = colors.one_bg },
-    PmenuSbar = { bg = colors.one_bg },
-    PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
-    PmenuThumb = { bg = colors.grey },
+	Pmenu = { bg = colors.one_bg },
+	PmenuSbar = { bg = colors.one_bg },
+	PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
+	PmenuThumb = { bg = colors.grey },
 
-    MatchParen = { link = "MatchWord" },
+	MatchParen = { link = "MatchWord" },
 
-    Comment = { fg = colors.grey_fg },
+	Comment = { fg = colors.grey_fg },
 
-    CursorLineNr = { fg = colors.white },
-    LineNr = { fg = colors.grey },
-    LineNrAbove = { fg = colors.one_bg2 },
-    LineNrBelow = { fg = colors.one_bg2 },
+	CursorLineNr = { fg = colors.white },
+	LineNr = { fg = colors.grey },
+	LineNrAbove = { fg = colors.one_bg2 },
+	LineNrBelow = { fg = colors.one_bg2 },
 
-    -- floating windows
-    FloatBorder = { fg = colors.blue },
-    NormalFloat = { bg = theme.base00 },
+	-- floating windows
+	FloatBorder = { fg = colors.blue },
+	NormalFloat = { bg = theme.base00 },
 
-    NvimInternalError = { fg = colors.red },
-    WinSeparator = { fg = colors.line },
+	NvimInternalError = { fg = colors.red },
+	WinSeparator = { fg = colors.line },
 
-    Normal = {
-        fg = theme.base05,
-        bg = theme.base00,
-    },
+	Normal = {
+		fg = theme.base05,
+		bg = theme.base00,
+	},
 
-    DevIconDefault = { fg = colors.red },
+	DevIconDefault = { fg = colors.red },
 
-    Bold = {
-        bold = true,
-    },
+	Bold = {
+		bold = true,
+	},
 
-    Debug = {
-        fg = theme.base08,
-    },
+	Debug = {
+		fg = theme.base08,
+	},
 
-    Directory = {
-        fg = theme.base0D,
-    },
+	Directory = {
+		fg = theme.base0D,
+	},
 
-    Error = {
-        fg = theme.base00,
-        bg = theme.base08,
-    },
+	Error = {
+		fg = theme.base00,
+		bg = theme.base08,
+	},
 
-    ErrorMsg = {
-        fg = theme.base08,
-        bg = theme.base00,
-    },
+	ErrorMsg = {
+		fg = theme.base08,
+		bg = theme.base00,
+	},
 
-    Exception = {
-        fg = theme.base08,
-    },
+	Exception = {
+		fg = theme.base08,
+	},
 
-    FoldColumn = {
-        fg = theme.base0C,
-        bg = theme.base01,
-    },
+	FoldColumn = {
+		fg = theme.base0C,
+		bg = theme.base01,
+	},
 
-    Folded = {
-        fg = colors.light_grey,
-        bg = colors.black2,
-    },
+	Folded = {
+		fg = colors.light_grey,
+		bg = colors.black2,
+	},
 
-    IncSearch = {
-        fg = theme.base01,
-        bg = theme.base09,
-    },
+	IncSearch = {
+		fg = theme.base01,
+		bg = theme.base09,
+	},
 
-    Italic = {
-        italic = true,
-    },
+	Italic = {
+		italic = true,
+	},
 
-    Macro = {
-        fg = theme.base08,
-    },
+	Macro = {
+		fg = theme.base08,
+	},
 
-    ModeMsg = {
-        fg = theme.base0B,
-    },
+	ModeMsg = {
+		fg = theme.base0B,
+	},
 
-    MoreMsg = {
-        fg = theme.base0B,
-    },
+	MoreMsg = {
+		fg = theme.base0B,
+	},
 
-    Question = {
-        fg = theme.base0D,
-    },
+	Question = {
+		fg = theme.base0D,
+	},
 
-    Search = {
-        fg = theme.base01,
-        bg = theme.base0A,
-    },
+	Search = {
+		fg = theme.base01,
+		bg = theme.base0A,
+	},
 
-    Substitute = {
-        fg = theme.base01,
-        bg = theme.base0A,
-        sp = "none",
-    },
+	Substitute = {
+		fg = theme.base01,
+		bg = theme.base0A,
+		sp = "none",
+	},
 
-    SpecialKey = {
-        fg = theme.base03,
-    },
+	SpecialKey = {
+		fg = theme.base03,
+	},
 
-    TooLong = {
-        fg = theme.base08,
-    },
+	TooLong = {
+		fg = theme.base08,
+	},
 
-    UnderLined = {
-        underline = true,
-    },
+	UnderLined = {
+		underline = true,
+	},
 
-    Visual = {
-        bg = theme.base02,
-    },
+	Visual = {
+		bg = theme.base02,
+	},
 
-    VisualNOS = {
-        fg = theme.base08,
-    },
+	VisualNOS = {
+		fg = theme.base08,
+	},
 
-    WarningMsg = {
-        fg = theme.base08,
-    },
+	WarningMsg = {
+		fg = theme.base08,
+	},
 
-    WildMenu = {
-        fg = theme.base08,
-        bg = theme.base0A,
-    },
+	WildMenu = {
+		fg = theme.base08,
+		bg = theme.base0A,
+	},
 
-    Title = {
-        fg = theme.base0D,
-        sp = "none",
-    },
+	Title = {
+		fg = theme.base0D,
+		sp = "none",
+	},
 
-    Conceal = {
-        bg = "NONE",
-    },
+	Conceal = {
+		bg = "NONE",
+	},
 
-    Cursor = {
-        fg = theme.base00,
-        bg = theme.base05,
-    },
+	Cursor = {
+		fg = theme.base00,
+		bg = theme.base05,
+	},
 
-    NonText = {
-        fg = theme.base03,
-    },
+	NonText = {
+		fg = theme.base03,
+	},
 
-    SignColumn = {
-        fg = theme.base03,
-        sp = "NONE",
-    },
+	SignColumn = {
+		fg = theme.base03,
+		sp = "NONE",
+	},
 
-    ColorColumn = {
-        bg = colors.black2,
-    },
+	ColorColumn = {
+		bg = colors.black2,
+	},
 
-    CursorColumn = {
-        bg = theme.base01,
-        sp = "none",
-    },
+	CursorColumn = {
+		bg = theme.base01,
+		sp = "none",
+	},
 
-    CursorLine = {
-        bg = colors.black2,
-    },
+	CursorLine = {
+		bg = colors.black2,
+	},
 
-    QuickFixLine = {
-        bg = theme.base01,
-        sp = "none",
-    },
+	QuickFixLine = {
+		bg = theme.base01,
+		sp = "none",
+	},
 }
 
 return defaults
