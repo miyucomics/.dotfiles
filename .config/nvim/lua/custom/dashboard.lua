@@ -113,7 +113,14 @@ return function()
 		vim.api.nvim_buf_add_highlight(buffer, namespace, "DashButtons", container_start + #header + i * 2 - 1, 0, -1)
 	end
 	for i = 1, #quote_segments do
-		vim.api.nvim_buf_add_highlight(buffer, namespace, "DashQuote", container_start + #header + (#buttons - 1) * 2 + i + 1, 0, -1)
+		vim.api.nvim_buf_add_highlight(
+			buffer,
+			namespace,
+			"DashQuote",
+			container_start + #header + (#buttons - 1) * 2 + i + 1,
+			0,
+			-1
+		)
 	end
 
 	local first_button = container_start + #header

@@ -25,7 +25,6 @@ vim.api.nvim_create_autocmd("UILeave", {
 	end,
 })
 
-
 Themer.set_theme = function(name)
 	local present, theme = pcall(require, "custom.themer.themes." .. name)
 	if not present then
@@ -34,7 +33,7 @@ Themer.set_theme = function(name)
 
 	current_theme = theme
 	Themer.sync_hl_groups()
-    Themer.polish_themes()
+	Themer.polish_themes()
 	Themer.sync_terminal()
 end
 
@@ -51,14 +50,14 @@ end
 
 Themer.polish_themes = function()
 	if current_theme["polish_hl"] ~= nil then
-        for key, value in pairs(current_theme["polish_hl"]) do
-            vim.api.nvim_set_hl(0, key, value)
-        end
+		for key, value in pairs(current_theme["polish_hl"]) do
+			vim.api.nvim_set_hl(0, key, value)
+		end
 	end
 end
 
 Themer.sync_terminal = function()
-    vim.api.nvim_exec_autocmds("ColorScheme", {})
+	vim.api.nvim_exec_autocmds("ColorScheme", {})
 
 	local term = {
 		"base01",
