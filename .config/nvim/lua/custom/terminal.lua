@@ -15,6 +15,7 @@ local config = {
 	winopts = {
 		number = false,
 		relativenumber = false,
+        scrolloff = 0,
 	},
 	sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
 	float = {
