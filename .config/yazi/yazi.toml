@@ -12,7 +12,6 @@ tab_size = 4
 aseprite = [{ run = 'aseprite "$@"', orphan = true }]
 browser = [{ run = 'vivaldi "$@"', orphan = true }]
 nvim = [{ run = 'nvim "$@"', block = true }]
-viewnior = [{ run = 'viewnior "$@"', orphan = true }]
 zathura = [{ run = 'zathura "$@"', orphan = true }]
 unzip = [{ run = 'unzip "$@" -x __M*' }]
 untar = [{ run = 'tar xzf "$@"' }]
@@ -27,8 +26,8 @@ rules = [
     {mime = "application/zip", use = ["unzip"]},
     {mime = "*.tar.gz", use = ["untar"]},
     {mime = "audio/*", use = ["paplay"]},
-    {mime = "image/*", use = ["viewnior", "aseprite", "swww", "swww_pixel", "browser"]},
+    {mime = "image/*", use = ["aseprite", "swww", "swww_pixel", "browser"]},
     {name = "*.html", use = ["browser", "nvim"]},
-	{name = "*/", use = ["nvim"]},
-	{name = "*", use = ["nvim"]}
+    {name = "*/", use = ["nvim"]},
+    {name = "*", use = ["nvim"]}
 ]
