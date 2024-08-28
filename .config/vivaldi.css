@@ -103,6 +103,7 @@ Remove buttons from address bar
 Remove unknown header element
 Remove unknown footer element
 Remove scrollbar from tab strip
+Remove border from tab stacks
 */
 #browser > svg,
 #tabs-container > div.resize > div > div,
@@ -112,7 +113,8 @@ Remove scrollbar from tab strip
 #main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div.toolbar.toolbar-small.toolbar-insideinput { display: none; }
 #header,
 #browser > footer,
-.tap-strip::-webkit-scrollbar {
+.tap-strip::-webkit-scrollbar,
+.svg-tab-stack {
     display: none !important;
 }
 
