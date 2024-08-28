@@ -1,5 +1,6 @@
 [[ $- != *i* ]] && return
 
+alias nv="nvim"
 alias cls="clear"
 alias ls="ls -A --color=auto --group-directories-first"
 alias wttr="curl -s wttr.in/new-york?T | sed -n '3,37p'"
