@@ -101,6 +101,9 @@ Remove close button from tabs
 Remove setting button
 Remove buttons from address bar
 Remove unknown header element
+Remove bookmark button from address bar
+Remove vivaldi button
+Remove dropdown thing
 Remove unknown footer element
 Remove scrollbar from tab strip
 Remove border from tab stacks
@@ -112,6 +115,9 @@ Remove border from tab stacks
 #main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div:nth-child(1) > div { display: none; }
 #main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div.toolbar.toolbar-small.toolbar-insideinput { display: none; }
 #header,
+.BookmarkButton,
+.vivaldi,
+#main > div.mainbar > div > div > div.UrlBar-AddressField.button-textonly.below > div:nth-child(3) > div.button-toolbar.drop-down-menu,
 #browser > footer,
 .tap-strip::-webkit-scrollbar,
 .svg-tab-stack {
