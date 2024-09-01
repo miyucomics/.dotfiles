@@ -25,7 +25,7 @@
 }
 
 /* address bar */
-.toolbar > .button-textonly {
+.UrlBar-AddressField {
     position: absolute !important;
     top: 0 !important;
     width: var(--stack-width) !important;
@@ -33,9 +33,10 @@
     margin-left: 0px !important;
     border-radius: 0;
     border: none !important;
+    padding-left: 10px;
 }
 
-.toolbar > .button-textonly:is(:hover, :focus-within) {
+.UrlBar-AddressField:is(:hover, :focus-within) {
     width: 100vw !important;
 }
 
@@ -101,7 +102,6 @@ Remove close button from tabs
 Remove setting button
 Remove buttons from address bar
 Remove unknown header element
-Remove bookmark button from address bar
 Remove vivaldi button
 Remove dropdown thing
 Remove unknown footer element
@@ -112,12 +112,9 @@ Remove border from tab stacks
 #tabs-container > div.resize > div > div,
 .tab-header > .close,
 #switch > div > div.button-toolbar.panel-clickoutside-ignore,
-#main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div:nth-child(1) > div { display: none; }
-#main > div.mainbar > div > div.UrlBar-AddressField.button-textonly.below > div.toolbar.toolbar-small.toolbar-insideinput { display: none; }
+.UrlBar-AddressField > .toolbar-insideinput,
 #header,
-.BookmarkButton,
 .vivaldi,
-#main > div.mainbar > div > div > div.UrlBar-AddressField.button-textonly.below > div:nth-child(3) > div.button-toolbar.drop-down-menu,
 #browser > footer,
 .tap-strip::-webkit-scrollbar,
 .svg-tab-stack {
