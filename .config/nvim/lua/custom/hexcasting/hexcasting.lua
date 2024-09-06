@@ -10,7 +10,8 @@ source.get_trigger_characters = function()
 end
 
 source.is_available = function()
-    return vim.fn.expand("%:t"):sub(-11) == ".hexcasting"
+    local extension = vim.fn.expand("%:t"):sub(-11)
+    return extension == ".hexcasting" or extension == ".hexpattern"
 end
 
 function source:complete(_, callback)
