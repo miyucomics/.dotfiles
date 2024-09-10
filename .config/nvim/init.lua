@@ -26,3 +26,5 @@ require("lazy").setup("plugins", {
 		},
 	},
 })
+
+require("custom.runner")
