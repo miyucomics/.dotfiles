@@ -28,3 +28,4 @@ require("lazy").setup("plugins", {
 })
 
 require("custom.runner")
+vim.o.statusline = "%!v:lua.require('custom.status')()"
