@@ -113,6 +113,8 @@ return {
 					},
 				},
 			})
+
+			lspconfig.uiua.setup({})
 		end,
 	},
 	{

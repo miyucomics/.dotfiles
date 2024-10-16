@@ -17,7 +17,7 @@ local config = {
 		relativenumber = false,
         scrolloff = 0,
 	},
-	sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
+	sizes = { sp = 0.5, vsp = 0.5, ["bo sp"] = 0.5, ["bo vsp"] = 0.5 },
 	float = {
 		relative = "editor",
 		row = 0.3,
