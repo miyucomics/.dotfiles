@@ -11,14 +11,15 @@ return {
 		"saecki/crates.nvim",
 		ft = "toml",
 		dependencies = "hrsh7th/nvim-cmp",
-		config = function()
-			require("crates").setup({
-				completion = {
-					cmp = {
-						enabled = true,
-					},
+		opts = {
+			completion = {
+				cmp = {
+					enabled = true,
 				},
-			})
+			},
+		},
+		config = function(_, opts)
+			require("crates").setup(opts)
 			require("crates.completion.cmp").setup()
 		end,
 	},
