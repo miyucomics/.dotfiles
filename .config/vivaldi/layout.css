@@ -1,109 +1,74 @@
 :root {
-    --stack-width: 300px;
+    --stack-width: 350px;
     --address-bar-height: 35px;
     --extensions-height: 35px;
-    --panel-width: 35px;
-    --panel-open-width: 400px;
-    --address-offset: 0px;
 }
 
-:root:has(#panels-container.icons) {
-    --stack-width: 335px;
-    --address-offset: 35px;
+/*
+Hides random SVG
+Hides random header
+Hides random footer
+Hides random span
+Hides the Vivaldi button in address bar
+Hides the plus button to add a new tab in tab bar
+*/
+#browser > svg,
+#browser > header,
+#browser > footer,
+#main > .inner > .StatusInfo,
+button.vivaldi,
+.button-toolbar.newtab,
+.toolbar-insideinput
+{
+    display: none !important;
 }
 
-:root:has(.button-toolbar.active) {
-    --address-offset: var(--panel-open-width);
-}
-
+/* Mainbar */
 .mainbar {
     position: absolute;
-    top: 0;
-    left: var(--address-offset);
+    padding: 0 !important;
+    border: 0 !important;
     width: var(--stack-width);
     height: calc(var(--address-bar-height) + var(--extensions-height));
 }
 
-/* address bar */
+.mainbar > div > .toolbar {
+    display: flex  !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+    height: calc(var(--address-bar-height) + var(--extensions-height));
+}
+
 .UrlBar-AddressField {
-    position: absolute !important;
-    top: 0 !important;
-    width: var(--stack-width) !important;
-    height: var(--address-bar-height) !important;
-    margin-left: 0px !important;
-    border-radius: 0;
-    border: none !important;
-    padding-left: 10px;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    width: 100%;
+    height: var(--address-bar-height);
 }
 
-.UrlBar-AddressField:is(:hover, :focus-within) {
-    width: 100vw !important;
-}
-
-/* extension bar */
 .toolbar-extensions {
-    position: absolute !important;
-    top: var(--address-bar-height);
-    height: var(--extension-height);
-    width: var(--stack-width);
-
-    display: flex;
-    flex-direction: row;
+    display: flex  !important;
+    flex-direction: row !important;
     justify-content: space-around;
+    width: 100%;
+    height: var(--extensions-height);
 }
 
-.toolbar-extensions > div:not(.button-toolbar) {
-    display: none;
+/* Tabbar */
+.tabbar-wrapper > .tabbar-wrapper {
+    position: absolute;
+    top: calc(var(--address-bar-height) + var(--extensions-height));
+    height: calc(100vh - var(--address-bar-height) + var(--extensions-height));
 }
 
-.button-toolbar {
-    width: 30px;
-    height: 30px;
-}
-
-/* Hide the Vivaldi menu button */
-#main > div.mainbar > div > button {
-    display: none;
+.tabbar-wrapper,
+#tabs-tabbar-container,
+.tab-strip
+{
+    width: var(--stack-width) !important;
 }
 
 #tabs-tabbar-container {
-    width: var(--stack-width);
-    min-width: var(--stack-width);
-    max-width: var(--stack-width);
-    top: calc(var(--address-bar-height) + var(--extensions-height));
-    height: calc(100% - var(--address-bar-height) + var(--extensions-height)) !important;
-}
-
-#panels-container.icons {
-    width: var(--panel-width) !important;
-}
-
-#panels-container:has(.button-toolbar.active) {
-    width: var(--panel-open-width) !important;
-}
-
-/*
-Remove unknown SVG
-Remove tab + button
-Remove close button from tabs
-Remove setting button
-Remove buttons from address bar
-Remove unknown header element
-Remove vivaldi button
-Remove dropdown thing
-Remove unknown footer element
-Remove scrollbar from tab strip
-Remove border from tab stacks
-*/
-#browser > svg,
-#tabs-container > div.resize > div > div,
-.tab-header > .close,
-#switch > div > div.button-toolbar.panel-clickoutside-ignore,
-.UrlBar-AddressField > .toolbar-insideinput,
-#header,
-.vivaldi,
-#browser > footer,
-.tap-strip::-webkit-scrollbar,
-.svg-tab-stack {
-    display: none !important;
+    padding: 0 !important;
 }
