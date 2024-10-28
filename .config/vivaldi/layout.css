@@ -82,19 +82,6 @@
     width: var(--panel-open-width) !important;
 }
 
-/* coloring */
-.tab {
-    color: #6c7086 !important;
-    background: #11111b !important;
-    transition: all 0.25s;
-    border-radius: 0 !important;
-}
-.tab.active {
-    color: #cdd6f4 !important;
-    background: #181825 !important;
-}
-.tab-strip { background: #11111b; }
-
 /*
 Remove unknown SVG
 Remove tab + button
@@ -120,7 +107,3 @@ Remove border from tab stacks
 .svg-tab-stack {
     display: none !important;
 }
-
-/* Add back favicon when a tab is playing audio */
-.favicon { transform: scale(1) !important; }
-.tab-audio { display: none; }
