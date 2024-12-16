@@ -19,8 +19,7 @@ Hides the plus button to add a new tab in tab bar
 #browser > footer,
 #main > .inner > .StatusInfo,
 button.vivaldi,
-.button-toolbar.newtab,
-.toolbar-insideinput
+.button-toolbar.newtab
 {
     display: none !important;
 }
@@ -32,6 +31,10 @@ button.vivaldi,
     border: 0 !important;
     width: var(--stack-width);
     height: calc(var(--address-bar-height) + var(--extensions-height));
+}
+
+.tabs-off:has(.mainbar) .mainbar {
+    display: none !important;
 }
 
 .mainbar > div > .toolbar {
