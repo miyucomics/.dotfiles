@@ -10,6 +10,8 @@
     background: #181825 !important;
 }
 
+.mainbar,
+.tabbar-wrapper,
 .tab-strip {
-    background: #11111b;
+    background: #11111b !important;
 }
