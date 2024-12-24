@@ -1,40 +1,16 @@
 :root {
-    --stack-width: 350px;
     --address-bar-height: 35px;
     --extensions-height: 35px;
 }
 
-/*
-Hides page title thing
-Hides random SVG
-Hides random header
-Hides random footer
-Hides random span
-Hides the Vivaldi button in address bar
-Hides the plus button to add a new tab in tab bar
-*/
-#header,
-#browser > svg,
-#browser > header,
-#browser > footer,
-#main > .inner > .StatusInfo,
-button.vivaldi,
-.button-toolbar.newtab
-{
+button.vivaldi {
     display: none !important;
 }
 
 /* Mainbar */
 .mainbar {
-    position: absolute;
     padding: 0 !important;
     border: 0 !important;
-    width: var(--stack-width);
-    height: calc(var(--address-bar-height) + var(--extensions-height));
-}
-
-.tabs-off:has(.mainbar) .mainbar {
-    display: none !important;
 }
 
 .mainbar > div > .toolbar {
@@ -61,19 +37,6 @@ button.vivaldi,
 }
 
 /* Tabbar */
-.tabbar-wrapper > .tabbar-wrapper {
-    position: absolute;
-    top: calc(var(--address-bar-height) + var(--extensions-height));
-    height: calc(100vh - var(--address-bar-height) + var(--extensions-height));
-}
-
-.tabbar-wrapper,
-#tabs-tabbar-container,
-.tab-strip
-{
-    width: var(--stack-width) !important;
-}
-
 #tabs-tabbar-container {
     padding: 0 !important;
 }
