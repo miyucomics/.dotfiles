@@ -1,8 +1,6 @@
 [manager]
 ratio = [2, 3, 2]
-sort_dir_first = true
 sort_by = "natural"
-sort_reverse = false
 show_hidden = true
 
 [preview]
@@ -24,7 +22,6 @@ rules = [
     {mime = "application/pdf", use = ["zathura"]},
     {name = "application/video", use = ["browser"]},
     {mime = "application/zip", use = ["unzip"]},
-    {mime = "*.tar.gz", use = ["untar"]},
     {mime = "audio/*", use = ["paplay"]},
     {mime = "image/*", use = ["aseprite", "swww", "swww_pixel", "browser"]},
     {name = "*.html", use = ["browser", "nvim"]},

@@ -18,9 +18,9 @@ keymap = [
 
 	{ on = [ "v" ], run = "visual_mode" },
 	{ on = [ "V" ], run = "visual_mode --unset" },
-	{ on = [ "<Space>" ], run = [ "select --state=none", "arrow 1" ] },
-	{ on = [ "<C-a>" ], run = "select_all --state=true" },
-	{ on = [ "<C-r>" ], run = "select_all --state=none" },
+	{ on = [ "<Space>" ], run = [ "toggle --state=none", "arrow 1" ] },
+	{ on = [ "<C-a>" ], run = "toggle_all --state=true" },
+	{ on = [ "<C-r>" ], run = "toggle_all --state=none" },
 
 	{ on = [ "o" ], run = "open" },
 	{ on = [ "O" ], run = "open --interactive" },
