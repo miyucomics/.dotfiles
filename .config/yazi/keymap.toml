@@ -6,8 +6,8 @@ keymap = [
 
 	{ on = [ "s" ], run = "search rg" },
 
-	{ on = [ "g", "g" ], run = "arrow -99999999", desc = "Move to top" },
-	{ on = [ "G" ], run = "arrow 99999999" },
+	{ on = [ "g", "g" ], run = "arrow top", desc = "Move to top" },
+	{ on = [ "G" ], run = "arrow bot" },
 	{ on = [ "w" ], run = "tasks_show" },
 	{ on = [ "k" ], run = "arrow -1" },
 	{ on = [ "j" ], run = "arrow 1" },
