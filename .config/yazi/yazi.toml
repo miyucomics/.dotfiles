@@ -8,7 +8,7 @@ tab_size = 4
 
 [opener]
 aseprite = [{ run = 'aseprite "$@"', orphan = true }]
-browser = [{ run = 'vivaldi "$@"', orphan = true }]
+browser = [{ run = 'zen-browser "$@"', orphan = true }]
 nvim = [{ run = 'nvim "$@"', block = true }]
 zathura = [{ run = 'zathura "$@"', orphan = true }]
 unzip = [{ run = 'unzip "$@" -x __M*' }]
