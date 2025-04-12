@@ -1,0 +1,14 @@
+matches:
+  - trigger: "\\-"
+    replace: "—"
+
+  - trigger: "\\tm"
+    replace: "™"
+
+  - trigger: "\\unix"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "date +%s"
