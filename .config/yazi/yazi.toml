@@ -16,6 +16,7 @@ untar = [{ run = 'tar xzf "$@"' }]
 swww = [{ run = 'swww img "$@" -tcenter', orphan = true }]
 swww_pixel = [{ desc = "swww pixel", run = 'swww img "$@" -tcenter -fNearest', orphan = true }]
 paplay = [{ run = 'paplay "$@"', orphan = true }]
+inkscape = [{ run = 'inkscape "$@"', orphan = true }]
 
 [open]
 rules = [
@@ -23,6 +24,7 @@ rules = [
     {name = "application/video", use = ["browser"]},
     {mime = "application/zip", use = ["unzip"]},
     {mime = "audio/*", use = ["paplay"]},
+    {name = "*.svg", use = ["inkscape", "browser"]},
     {mime = "image/*", use = ["aseprite", "swww", "swww_pixel", "browser"]},
     {name = "*.html", use = ["browser", "nvim"]},
     {name = "*/", use = ["nvim"]},

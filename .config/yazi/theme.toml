@@ -4,8 +4,8 @@ preview_hovered = { fg = "cyan" }
 syntect_theme = "~/.config/yazi/theme.txt"
 
 [status]
-separator_open = ""
-separator_close = ""
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" } 
 
 [input]
 title = { bold = true }
