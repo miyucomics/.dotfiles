@@ -62,10 +62,10 @@ keymap = [
 	{ on = [ ",", "s" ], run = "sort size --dir-first",                   desc = "Sort by size" },
 	{ on = [ ",", "S" ], run = "sort size --reverse --dir-first",         desc = "Sort by size (reverse)" },
 
-	{ on = [ "g", "h" ], run = "cd ~",           desc = "Go to the home directory" },
-	{ on = [ "g", "c" ], run = "cd ~/.config",   desc = "Go to the config directory" },
-	{ on = [ "g", "d" ], run = "cd ~/Documents", desc = "Go to the documents directory" },
-	{ on = [ "g", "t" ], run = "cd /tmp",        desc = "Go to the temporary directory" },
+	{ on = [ "g", "h" ], run = "cd ~",                     desc = "Go to the home directory" },
+	{ on = [ "g", "c" ], run = "cd ~/.dotfiles",           desc = "Go to the dotfiles directory" },
+	{ on = [ "g", "d" ], run = "cd ~/Documents",           desc = "Go to the documents directory" },
+	{ on = [ "g", "m" ], run = "cd ~/Documents/code/mods", desc = "Go to the mods directory" },
 
 	{ on = [ "z" ],         run = "plugin zoxide",                desc = "Jump to a directory using zoxide" },
 	{ on = [ "Z" ],         run = "plugin fzf",                   desc = "Jump to a directory, or reveal a file using fzf" },
@@ -106,3 +106,8 @@ keymap = [
 	{ on = [ "u" ],     run = "undo" },
 	{ on = [ "<C-r>" ], run = "redo" }
 ]
+
+[[manager.prepend_keymap]]
+on   = "!"
+run  = 'shell "$SHELL" --block'
+desc = "Open shell here"
