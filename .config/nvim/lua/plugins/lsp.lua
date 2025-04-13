@@ -52,7 +52,6 @@ return {
 			}
 
 			local lspconfig = require("lspconfig")
-			local utils = require("lspconfig.util")
 
 			lspconfig.lua_ls.setup({
 				on_attach = on_attach,
@@ -87,35 +86,6 @@ return {
 				handlers = handlers,
 				filetypes = { "python" },
 			})
-
-			lspconfig.rust_analyzer.setup({
-				on_attach = on_attach,
-				capabilities = capabilities,
-				on_init = on_init,
-				handlers = handlers,
-				filetypes = { "rust" },
-
-				root_dir = utils.root_pattern("Cargo.toml"),
-				settings = {
-					["rust-analyzer"] = {
-						checkOnSave = {
-							command = "clippy",
-						},
-						inlayHints = { locationLinks = false },
-						diagnostics = {
-							enable = true,
-							experimental = {
-								enable = true,
-							},
-						},
-						cargo = {
-							allFeatures = true,
-						},
-					},
-				},
-			})
-
-			lspconfig.uiua.setup({})
 		end,
 	},
 	{
