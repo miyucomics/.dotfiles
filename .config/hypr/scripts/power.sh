@@ -1,4 +1,4 @@
-chosen=$(echo -e "Suspend\nExit\nShutdown\nRestart" | tofi --prompt-text "Power:")
+chosen=$(echo -e "Suspend\nExit\nShutdown" | tofi --prompt-text "Power:")
 
 case "$chosen" in
     "Suspend")
@@ -9,8 +9,5 @@ case "$chosen" in
         ;;
     "Shutdown")
         shutdown now
-        ;;
-    "Restart")
-        reboot now
         ;;
 esac
