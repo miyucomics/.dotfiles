@@ -52,7 +52,6 @@ return {
 			{ name = "nvim_lsp" },
 			{ name = "luasnip" },
 			{ name = "crates" },
-            { name = "hexcasting" }
 		},
 		window = {
 			completion = {
@@ -68,7 +67,6 @@ return {
 		},
 	},
 	config = function(_, opts)
-        require("custom.hexcasting.hexcasting")
 		local cmp = require("cmp")
 		opts.mapping = {
 			["<c-e>"] = cmp.mapping({
