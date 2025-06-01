@@ -1,0 +1,118 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    theme: "miyu",
+    lyrics_dir: "/home/miyu/Documents/music",
+    volume_step: 5,
+    wrap_navigation: true,
+    status_update_interval_ms: 1000,
+    keybinds: (
+        global: {
+            ",":       VolumeDown,
+            ".":       VolumeUp,
+            "1":       SwitchToTab("Playing"),
+            "2":       SwitchToTab("Dir"),
+            "3":       SwitchToTab("Lyrics"),
+            "4":       SwitchToTab("Settings"),
+            "b":       SeekBack,
+            "f":       SeekForward,
+            "q":       Quit,
+            ">":       NextTrack,
+            "<":       PreviousTrack,
+            "p":       TogglePause,
+            "z":       ToggleRepeat,
+            "x":       ToggleRandom,
+            "c":       ToggleConsume,
+            "v":       ToggleSingle,
+            "~":       ShowHelp,
+        },
+        navigation: {
+            "k":         Up,
+            "j":         Down,
+            "h":         Left,
+            "l":         Right,
+            "N":         PreviousResult,
+            "n":         NextResult,
+            "a":         Add,
+            "A":         AddAll,
+            "r":         Rename,
+            "g":         Top,
+            "G":         Bottom,
+            "<Space>":   Select,
+            "<C-Space>": InvertSelection,
+            "<CR>":      Confirm,
+            "i":         FocusInput,
+            "/":         EnterSearch,
+            "<Esc>":     Close,
+            "D":         Delete,
+        },
+        queue: {
+            "C":       JumpToCurrent,
+            "D":       DeleteAll,
+            "d":       Delete,
+            "<CR>":    Play,
+        },
+    ),
+    search: (
+        case_sensitive: false,
+        mode: Contains,
+        tags: [
+            (value: "any",         label: "Any Tag"),
+            (value: "title",       label: "Title"),
+            (value: "album",       label: "Album"),
+            (value: "artist",      label: "Artist"),
+            (value: "filename",    label: "Filename"),
+            (value: "genre",       label: "Genre"),
+        ],
+    ),
+    tabs: [
+        (
+            name: "Playing",
+            pane: Split(
+                direction: Horizontal,
+                panes: [
+                    (
+                        size: "60%",
+                        pane: Pane(Queue),
+                    ),
+                    (
+                        size: "40%",
+                        pane: Pane(AlbumArt),
+                    ),
+                ],
+            ),
+        ),
+        (
+            name: "Dir",
+            pane: Pane(Directories),
+        ),
+        (
+            name: "Lyrics",
+            pane: Split(
+                direction: Vertical,
+                panes: [
+                    (
+                        pane: Pane(Lyrics),
+                        size: "100%",
+                    ),
+                    (
+                        pane: Pane(ProgressBar),
+                        size: "1",
+                    ),
+                ],
+            ),
+        ),
+        (
+            name: "Settings",
+            pane: Pane(Property(
+                content: [
+                    (
+                        kind: Property(Widget(States(active_style: (fg: "#cdd6f4", modifiers: "Bold"), separator_style: (fg: "#1e1e2e")))),
+                        style: (fg: "#585b70")
+                    ),
+                ],
+            )),
+        ),
+    ],
+)
