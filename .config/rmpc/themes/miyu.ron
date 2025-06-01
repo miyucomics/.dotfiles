@@ -1,0 +1,88 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    draw_borders: true,
+    show_song_table_header: false,
+    browser_column_widths: [0, 75, 25],
+    tab_bar: (enabled: false),
+    background_color: "#1e1e2e",
+    header_background_color: "#1e1e2e",
+    text_color: "#cdd6f4",
+    preview_label_style: (fg: "#f38ba8"),
+    preview_metadata_group_style: (fg: "#89b4fa"),
+    highlighted_item_style: (fg: "#c6a0f6"),
+    current_item_style: (fg: "#1e1e2e", bg: "#c6a0f6", modifiers: "Bold"),
+    borders_style: (fg: "#89b4fa"),
+    highlight_border_style: (fg: "#89b4fa", modifiers: "Bold"),
+    symbols: (song: "󰝚 ", dir: " ", marker: "* ", ellipsis: "…"),
+    progress_bar: (
+        symbols: ["—", "⭘", "—"],
+        track_style: (fg: "#89b4fa"),
+        elapsed_style: (fg: "#89b4fa"),
+        thumb_style: (fg: "#89b4fa"),
+    ),
+    scrollbar: (symbols: [" ", " ", " ", " "]),
+    header: (
+        rows: [
+            (
+                left: [],
+                center: [
+                    (kind: Property(Song(Title)), style: (modifiers: "Bold"),
+                        default: (kind: Text("No Song"), style: (modifiers: "Bold"))
+                    )
+                ],
+                right: []
+            ),
+            (
+                left: [],
+                center: [
+                    (kind: Property(Song(Artist)), style: (fg: "#f9e2af", modifiers: "Italic"), default: (kind: Text("Unknown Artist"))),
+                    (kind: Text(" - "), style: (fg: "#f9e2af", modifiers: "Italic")),
+                    (kind: Property(Song(Album)), style: (fg: "#f9e2af", modifiers: "Italic"), default: (kind: Text("Unknown Album")))
+                ],
+                right: [],
+            ),
+        ],
+    ),
+    layout: Split(
+        direction: Vertical,
+        panes: [
+            (
+                pane: Pane(Header),
+                size: "3",
+                borders: "BOTTOM",
+            ),
+            (
+                pane: Pane(TabContent),
+                size: "100%",
+            ),
+        ],
+    ),
+    browser_song_format: [
+        (
+            kind: Group([
+                (kind: Property(Artist)),
+                (kind: Text(" - ")),
+                (kind: Property(Title)),
+            ]),
+            default: (kind: Property(Filename))
+        ),
+    ],
+    song_table_format: [
+        (
+            prop: (kind: Property(Artist), style: (fg: "#7f849c", modifiers: "Italic"), default: (kind: Text("Unknown"))),
+            width: "50%",
+            alignment: Right,
+        ),
+        (
+            prop: (kind: Text("-"), style: (fg: "#7f849c"), default: (kind: Text("Unknown"))),
+            width: "1",
+            alignment: Center,
+        ),
+        (
+            prop: (kind: Property(Title), style: (fg: "#7f849c", modifiers: "Bold"), default: (kind: Text("Unknown"))),
+            width: "50%",
+        ),
+    ],
+)

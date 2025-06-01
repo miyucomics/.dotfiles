@@ -25,5 +25,8 @@
     },
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
-    "rust-analyzer.check.command": "clippy"
+    "rust-analyzer.check.command": "clippy",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.stickyScroll.enabled": false,
+    "editor.fontFamily": "'FiraCode Nerd Font', monospace"
 }
