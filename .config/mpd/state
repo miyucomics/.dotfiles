@@ -1,8 +1,8 @@
 sw_volume: 100
 audio_device_state:1:PipeWire Output
-state: play
+state: pause
 current: 30
-time: 120.012
+time: 87.437
 random: 0
 repeat: 0
 single: 0
@@ -42,7 +42,6 @@ playlist_begin
 27:Cavetown_Telescope.ogg
 28:Egg_sorry haha i fell asleep.ogg
 29:Sara Kays_Struck by Lightning (feat. Cavetown).ogg
-30:Cavetown_heart attack.ogg
-31:Cavetown_laundry day.ogg
-32:Write Out Loud_Little Miss Perfect (feat. Joriah Kwamé & Taylor Louderman).ogg
+30:Cavetown_laundry day.ogg
+31:Write Out Loud_Little Miss Perfect (feat. Joriah Kwamé & Taylor Louderman).ogg
 playlist_end
