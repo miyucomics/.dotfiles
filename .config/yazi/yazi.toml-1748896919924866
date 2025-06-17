@@ -1,0 +1,32 @@
+[manager]
+ratio = [2, 3, 2]
+sort_by = "natural"
+show_hidden = true
+
+[preview]
+tab_size = 4
+
+[opener]
+aseprite = [{ run = 'aseprite "$@"', orphan = true }]
+browser = [{ run = 'zen-browser "$@"', orphan = true }]
+nvim = [{ run = 'nvim "$@"', block = true }]
+zathura = [{ run = 'zathura "$@"', orphan = true }]
+unzip = [{ run = 'unzip "$@" -x __M*' }]
+untar = [{ run = 'tar xzf "$@"' }]
+swww = [{ run = 'swww img "$@" -tcenter', orphan = true }]
+swww_pixel = [{ desc = "swww pixel", run = 'swww img "$@" -tcenter -fNearest', orphan = true }]
+paplay = [{ run = 'paplay "$@"', orphan = true }]
+inkscape = [{ run = 'inkscape "$@"', orphan = true }]
+
+[open]
+rules = [
+    {mime = "application/pdf", use = ["zathura"]},
+    {name = "application/video", use = ["browser"]},
+    {mime = "application/zip", use = ["unzip"]},
+    {mime = "audio/*", use = ["paplay"]},
+    {name = "*.svg", use = ["inkscape", "browser"]},
+    {mime = "image/*", use = ["aseprite", "swww", "swww_pixel", "browser"]},
+    {name = "*.html", use = ["browser", "nvim"]},
+    {name = "*/", use = ["nvim"]},
+    {name = "*", use = ["nvim"]}
+]

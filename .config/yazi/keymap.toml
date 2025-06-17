@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 keymap = [
 	{ on = [ "<Esc>" ], run = "escape" },
 	{ on = [ "q" ],     run = "quit" },
@@ -107,7 +107,7 @@ keymap = [
 	{ on = [ "<C-r>" ], run = "redo" }
 ]
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "!"
 run  = 'shell "$SHELL" --block'
 desc = "Open shell here"

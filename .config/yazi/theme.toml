@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 cwd = { fg = "blue" }
 preview_hovered = { fg = "cyan" }
 syntect_theme = "~/.config/yazi/theme.txt"

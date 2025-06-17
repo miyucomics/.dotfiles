@@ -1,0 +1,30 @@
+[manager]
+cwd = { fg = "blue" }
+preview_hovered = { fg = "cyan" }
+syntect_theme = "~/.config/yazi/theme.txt"
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" } 
+
+[input]
+title = { bold = true }
+
+[filetype]
+rules = [
+	{ name = "*/", is = "link", fg = "green" },
+	{ name = "*", is = "link", fg = "green" },
+	{ name = "*/", fg = "blue" },
+	{ mime = "audio/*", fg = "red" },
+	{ mime = "image/*", fg = "cyan" },
+	{ mime = "video/*", fg = "yellow" },
+]
+
+[icon]
+dirs = [
+    { name = "*", text = "" }
+]
+
+files = [
+    { name = "*", text = "" }
+]
