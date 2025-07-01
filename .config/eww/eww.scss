@@ -1,0 +1,24 @@
+.bar {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  padding: 0 10px;
+
+  .left, .center, .right {
+    spacing: 10px;
+    padding: 0 10px;
+  }
+
+  .left {
+    min-width: 200px;
+  }
+
+  .center {
+    halign: center;
+  }
+
+  .right {
+    halign: end;
+  }
+}

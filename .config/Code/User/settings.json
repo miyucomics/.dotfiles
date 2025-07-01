@@ -28,5 +28,5 @@
     "rust-analyzer.check.command": "clippy",
     "git.openRepositoryInParentFolders": "never",
     "editor.stickyScroll.enabled": false,
-    "editor.fontFamily": "'FiraCode Nerd Font', monospace"
+    "editor.fontFamily": "'IosevkaTerm Nerd Font Mono', monospace"
 }
