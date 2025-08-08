@@ -28,5 +28,8 @@
     "rust-analyzer.check.command": "clippy",
     "git.openRepositoryInParentFolders": "never",
     "editor.stickyScroll.enabled": false,
-    "editor.fontFamily": "'IosevkaTerm Nerd Font Mono', monospace"
+    "editor.fontFamily": "'IosevkaTerm Nerd Font Mono', monospace",
+    "qml-ls-client.qmllsPath": "qmlls6",
+    "qt-qml.doNotAskForQmllsDownload": true,
+    "qt-qml.qmlls.useQmlImportPathEnvVar": true
 }
