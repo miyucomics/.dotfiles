@@ -1,4 +1,5 @@
 alias ls="eza -a --group-directories-first"
+alias lst="eza --tree --level 2 -a --group-directories-first"
 alias wttr="curl -s wttr.in/new-york?T | sed -n '3,37p'"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
