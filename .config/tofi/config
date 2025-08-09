@@ -6,9 +6,9 @@ border-width = 0
 padding-left = 35%
 padding-top = 35%
 
+num-results = 10
 result-spacing = 25
-num-results = 5
-font = "JetBrains Mono"
+font = "IosevkaTerm Nerd Font Mono"
 
 background-color = #11111bdd
 text-color = #cdd6f4
