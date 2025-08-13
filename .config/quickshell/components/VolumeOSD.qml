@@ -1,15 +1,14 @@
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
-import Quickshell.Services.Pipewire
-import Quickshell.Widgets
+import qs.services
 
 Scope {
 	id: root
 	property bool shouldShowOsd: false
 
 	Connections {
-		target: Pipewire.defaultAudioSink?.audio
+		target: Volume
 		function onVolumeChanged() {
 			root.shouldShowOsd = true;
 			hideTimer.restart();
@@ -20,10 +19,6 @@ Scope {
 		id: hideTimer
 		interval: 1000
 		onTriggered: root.shouldShowOsd = false
-	}
-
-	PwObjectTracker {
-		objects: [ Pipewire.defaultAudioSink ]
 	}
 
 	LazyLoader {
@@ -60,7 +55,7 @@ Scope {
 						Rectangle {
                             color: "#b4befe"
 							radius: parent.radius
-							implicitWidth: parent.width * (Pipewire.defaultAudioSink?.audio.volume ?? 0)
+							implicitWidth: parent.width * (Volume.animatedVolume)
 
 							anchors {
 								left: parent.left

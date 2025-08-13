@@ -2,5 +2,6 @@ import Quickshell
 import qs.components
 
 ShellRoot {
-    Volume {}
+    BrightnessOSD {}
+    VolumeOSD {}
 }
