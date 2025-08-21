@@ -11,34 +11,31 @@ Variants {
         screen: modelData
 
         anchors {
-            right: true
+            top: true
             bottom: true
+            left: true
+            right: true
         }
 
         margins {
-            right: 75
-            bottom: 75
+            left: 75
+            top: 75
         }
 
-        implicitWidth: content.width
-        implicitHeight: content.height
-
+        exclusiveZone: 0
         color: "transparent"
-        mask: Region {}
-        WlrLayershell.layer: WlrLayer.Overlay
+        WlrLayershell.layer: WlrLayer.Background
 
         ColumnLayout {
             id: content
 
             Text {
                 text: "Activate Linux"
-                color: "#99ffffff"
                 font.pointSize: 22
             }
 
             Text {
                 text: "Go to Settings to activate Linux"
-                color: "#99ffffff"
                 font.pointSize: 14
             }
         }
