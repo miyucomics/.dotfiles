@@ -5,9 +5,10 @@ require("core.bootstrap")
 require("custom.themer").set_theme("catppuccin-mocha")
 
 require("lazy").setup("plugins", {
-	ui = {
-		backdrop = 100,
-	},
+    ui = {
+        backdrop = 100,
+        border = "rounded"
+    },
 	performance = {
 		rtp = {
 			disabled_plugins = {

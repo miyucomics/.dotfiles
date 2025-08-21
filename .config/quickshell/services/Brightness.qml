@@ -8,7 +8,6 @@ Singleton {
     id: root
     property real brightness: 1
     property int maximum: 1
-    property real animatedBrightness: 1
 
     FileView {
         watchChanges: true
@@ -23,14 +22,6 @@ Singleton {
         onFileChanged: reload()
         onLoaded: () => {
             root.brightness = parseInt(text()) / root.maximum
-            root.animatedBrightness = parseInt(text()) / root.maximum
-        }
-    }
-
-    Behavior on animatedBrightness {
-        NumberAnimation {
-            duration: 300
-            easing.type: Easing.OutSine
         }
     }
 }
