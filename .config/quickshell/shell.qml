@@ -1,7 +1,8 @@
 import Quickshell
-import qs.components
+import qs.components.osd
 
 ShellRoot {
+    // NotificationMenu {}
     BrightnessOSD {}
     VolumeOSD {}
 }

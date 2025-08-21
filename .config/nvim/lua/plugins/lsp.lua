@@ -19,7 +19,12 @@ return {
 	{
 		"williamboman/mason.nvim",
 		cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-		opts = { ui = { border = "rounded" } },
+		opts = {
+			ui = {
+				backdrop = 100,
+				border = "rounded",
+			},
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -67,7 +72,7 @@ return {
 						},
 						workspace = {
 							library = {
-                                "${3rd}/love2d/library",
+								"${3rd}/love2d/library",
 								vim.fn.expand("$VIMRUNTIME/lua"),
 								vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
 								vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
@@ -85,6 +90,14 @@ return {
 				on_init = on_init,
 				handlers = handlers,
 				filetypes = { "python" },
+			})
+
+			lspconfig.qmlls.setup({})
+
+			vim.diagnostic.config({
+				virtual_text = true,
+				signs = true,
+				underline = true,
 			})
 		end,
 	},
