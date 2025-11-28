@@ -42,9 +42,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Escape { spawn-sh "sh ~/.config/niri/scripts/power.sh"; }
     Mod+R { spawn-sh "niri msg action spawn-sh -- '$(tofi-drun)'"; }
     Mod+T { spawn "footclient"; }
     Mod+G { spawn "zen-browser"; }
+    Mod+E { spawn "obsidian"; }
 
     Mod+W { spawn-sh "swww img -twipe ~/.config/wallpapers/normal/$(ls ~/.config/wallpapers/normal/ | tofi --ascii-input true --prompt-text 'set wallpaper to ')"; }
     Mod+Shift+W { spawn-sh "swww img -twipe -fNearest ~/.config/wallpapers/pixel/$(ls ~/.config/wallpapers/pixel/ | tofi --ascii-input true --prompt-text 'set wallpaper to ')"; }
