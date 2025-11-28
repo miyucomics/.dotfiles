@@ -1,5 +1,6 @@
 format = "$directory$python$rust$character"
 palette = "mocha"
+scan_timeout = 1000
 
 [character]
 success_symbol = "[❯](bold blue)"
