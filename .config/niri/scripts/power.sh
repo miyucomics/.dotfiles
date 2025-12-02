@@ -5,7 +5,7 @@ case "$chosen" in
         systemctl suspend
         ;;
     "Exit")
-        hyprctl dispatch exit
+        niri msg action quit
         ;;
     "Shutdown")
         shutdown now
