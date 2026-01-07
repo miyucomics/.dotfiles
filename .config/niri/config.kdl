@@ -53,6 +53,7 @@ gestures {
 
 prefer-no-csd
 spawn-at-startup "swww-daemon"
+spawn-sh-at-startup "chameleos --stroke-width 4 --stroke-color \"#b4befe\""
 spawn-sh-at-startup "foot --server"
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -77,6 +78,10 @@ binds {
 
     XF86Mail allow-when-locked=true { spawn-sh "brightnessctl set 10%-"; }
     XF86HomePage allow-when-locked=true { spawn-sh "brightnessctl set 10%+"; }
+
+    Mod+F1 { spawn-sh "chamel toggle"; }
+    Mod+F2 { spawn-sh "chamel undo"; }
+    Mod+F3 { spawn-sh "chamel clear"; }
 
     Mod+O repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
