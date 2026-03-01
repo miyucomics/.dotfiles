@@ -6,12 +6,10 @@ return {
 	},
 	keys = {
 		{ "<leader><leader>", ":Telescope find_files<cr>" },
+		{ "<leader>ff", ":Telescope find_files<cr>" },
 		{ "<leader>cm", ":Telescope git_commits<cr>" },
-		{ "<leader>ct", ":Telescope themer<cr>" },
 		{ "<leader>fb", ":Telescope buffers<cr>" },
-		{ "<leader>fo", ":Telescope old_files<cr>" },
 		{ "<leader>fg", ":Telescope live_grep<cr>" },
-		{ "<leader>fh", ":Telescope help_tags<cr>" },
 		{ "<leader>fz", ":Telescope current_buffer_fuzzy_find<cr>" },
 		{ "<leader>gt", ":Telescope git_status<cr>" },
 		{ "<leader>ma", ":Telescope marks<cr>" },
@@ -53,6 +51,5 @@ return {
 		}
 		require("telescope").setup(opts)
 		require("telescope").load_extension("fzf")
-		require("telescope").load_extension("themer")
 	end,
 }
