@@ -2,13 +2,17 @@ require("core.settings")
 require("core.keymap")
 require("core.bootstrap")
 
-require("custom.themer").set_theme("catppuccin-mocha")
-
 require("lazy").setup("plugins", {
-    ui = {
-        backdrop = 100,
-        border = "rounded"
-    },
+	rocks = {
+		enabled = false,
+	},
+	ui = {
+		backdrop = 100,
+		border = "rounded",
+	},
+	change_detection = {
+		enabled = false,
+	},
 	performance = {
 		rtp = {
 			disabled_plugins = {
