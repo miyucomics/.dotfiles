@@ -6,7 +6,6 @@ return {
 	},
 	keys = {
 		{ "<leader><leader>", ":Telescope find_files<cr>" },
-		{ "<leader>ff", ":Telescope find_files<cr>" },
 		{ "<leader>cm", ":Telescope git_commits<cr>" },
 		{ "<leader>fb", ":Telescope buffers<cr>" },
 		{ "<leader>fg", ":Telescope live_grep<cr>" },
