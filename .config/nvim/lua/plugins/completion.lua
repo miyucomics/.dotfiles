@@ -28,7 +28,6 @@ local icons = {
 
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
 	dependencies = {
 		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",

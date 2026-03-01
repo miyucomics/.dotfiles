@@ -40,7 +40,6 @@ local buttons = {
 	{ "Find File", "Spc f f", "Telescope find_files" },
 	{ "Recent Files", "Spc f o", "Telescope oldfiles" },
 	{ "Find Word", "Spc f g", "Telescope live_grep" },
-	{ "Themes", "Spc c t", "Telescope themer" },
 }
 
 local quote = "\"If there's a book that you want to read, but it hasn't been written yet, then you must write it.\""
