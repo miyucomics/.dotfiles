@@ -3,8 +3,6 @@ vim.keymap.set("n", "<c-c>", ":%y+<cr>", { silent = true })
 vim.keymap.set("n", "<leader>q", ":wqa<cr>", { silent = true })
 vim.keymap.set("n", "<leader>h", ":nohlsearch<cr>", { silent = true })
 
-vim.keymap.set("n", "<leader>d", require("custom.dashboard"))
-
 -- Delete whole word at a time
 vim.keymap.set("i", "<c-bs>", "<c-w>", { noremap = true })
 
