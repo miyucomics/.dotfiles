@@ -1,7 +1,6 @@
 vim.o.termguicolors = true
 vim.o.splitright = true
 vim.o.splitbelow = true
-vim.o.winborder = "rounded"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "

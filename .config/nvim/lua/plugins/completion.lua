@@ -1,86 +1,23 @@
-local icons = {
-	Text = "󰉿",
-	Method = "󰆧",
-	Function = "󰊕",
-	Constructor = "",
-	Field = "󰜢",
-	Variable = "󰀫",
-	Class = "󰠱",
-	Interface = "",
-	Module = "",
-	Property = "󰜢",
-	Unit = "󰑭",
-	Value = "󰎠",
-	Enum = "",
-	Keyword = "󰌋",
-	Snippet = "",
-	Color = "󰏘",
-	File = "󰈙",
-	Reference = "󰈇",
-	Folder = "󰉋",
-	EnumMember = "",
-	Constant = "󰏿",
-	Struct = "󰙅",
-	Event = "",
-	Operator = "󰆕",
-	TypeParameter = "",
-}
-
 return {
-	"hrsh7th/nvim-cmp",
-	dependencies = {
-		"saadparwaiz1/cmp_luasnip",
-		"L3MON4D3/LuaSnip",
-		"hrsh7th/cmp-nvim-lsp",
-	},
+	"saghen/blink.cmp",
+	version = "1.*",
 	opts = {
-		formatting = {
-			fields = { "kind", "abbr", "menu" },
-			format = function(_, vim_item)
-				vim_item.menu = vim_item.kind
-				vim_item.kind = (icons[vim_item.kind] or "") .. " "
-				return vim_item
-			end,
+		keymap = {
+			["<c-e>"] = { "show", "hide" },
+			["<c-k>"] = { "select_prev" },
+			["<c-j>"] = { "select_next" },
+			["<c-l>"] = { "scroll_documentation_down" },
+			["<tab>"] = { "select_and_accept", "fallback" },
 		},
-		snippet = {
-			expand = function(args)
-				require("luasnip").lsp_expand(args.body)
-			end,
-		},
-		sources = {
-			{ name = "nvim_lsp" },
-			{ name = "luasnip" },
-			{ name = "crates" },
-		},
-		window = {
-			completion = {
-				border = "rounded",
-				scrollbar = false,
-				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
-			},
-			documentation = {
-				border = "rounded",
-				scrollbar = false,
-				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+		signature = { enabled = true },
+		completion = {
+			documentation = { auto_show = true },
+			ghost_text = { enabled = true },
+			menu = {
+				draw = {
+					columns = { { "kind_icon" }, { "label" }, { "kind" } },
+				},
 			},
 		},
 	},
-	config = function(_, opts)
-		local cmp = require("cmp")
-		opts.mapping = {
-			["<c-e>"] = cmp.mapping({
-				i = function()
-					if cmp.visible() then
-						cmp.abort()
-						return
-					end
-					cmp.complete()
-				end,
-			}),
-			["<c-k>"] = cmp.mapping.select_prev_item(),
-			["<c-j>"] = cmp.mapping.select_next_item(),
-			["<tab>"] = cmp.mapping.confirm({ select = true }),
-		}
-		cmp.setup(opts)
-	end,
 }
