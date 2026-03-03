@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Lovely Night Eighties",
     "workbench.iconTheme": "catppuccin-mocha",
     "chat.commandCenter.enabled": false,
     "workbench.layoutControl.enabled": false,
@@ -31,5 +31,6 @@
     "editor.fontFamily": "'IosevkaTerm Nerd Font Mono', monospace",
     "qml-ls-client.qmllsPath": "qmlls6",
     "qt-qml.doNotAskForQmllsDownload": true,
-    "qt-qml.qmlls.useQmlImportPathEnvVar": true
+    "qt-qml.qmlls.useQmlImportPathEnvVar": true,
+    "window.menuBarVisibility": "hidden"
 }
