@@ -1,0 +1,68 @@
+tick_rate = 50
+default_channel = "files"
+
+shell = "bash"
+history_size = 0
+global_history = false
+
+[ui]
+ui_scale = 100
+orientation = "landscape"
+theme = "catppuccin-mocha-blue.toml"
+
+[ui.input_bar]
+prompt = ">"
+position = "top"
+border_type = "rounded"
+
+[ui.status_bar]
+hidden = true
+
+[ui.results_panel]
+border_type = "rounded"
+
+[ui.preview_panel]
+size = 50
+scrollbar = true
+border_type = "rounded"
+hidden = false
+
+[ui.help_panel]
+show_categories = true
+hidden = true
+
+[ui.remote_control]
+sort_alphabetically = true
+show_channel_descriptions = true
+
+[keybindings]
+esc = "quit"
+ctrl-j = "select_next_entry"
+ctrl-k = "select_prev_entry"
+tab = "toggle_selection_down"
+enter = "confirm_selection"
+pagedown = "scroll_preview_half_page_down"
+pageup = "scroll_preview_half_page_up"
+ctrl-f = "cycle_previews"
+ctrl-t = "toggle_remote_control"
+ctrl-x = "toggle_action_picker"
+ctrl-shift-p = "toggle_preview"
+ctrl-shift-h = "toggle_help"
+ctrl-shift-l = "toggle_layout"
+backspace = "delete_prev_char"
+ctrl-backspace = "delete_prev_word"
+ctrl-u = "delete_line"
+delete = "delete_next_char"
+left = "go_to_prev_char"
+right = "go_to_next_char"
+ctrl-h = "go_to_prev_char"
+ctrl-l = "go_to_next_char"
+home = "go_to_input_start"
+end = "go_to_input_end"
+
+[shell_integration]
+fallback_channel = "files"
+
+[shell_integration.keybindings]
+"smart_autocomplete" = "ctrl-t"
+"command_history" = "ctrl-r"

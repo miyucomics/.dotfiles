@@ -14,7 +14,7 @@ keymap = [
 	{ on = [ "h" ], run = [ "leave", "escape --visual --select" ] },
 	{ on = [ "l" ], run = [ "enter", "escape --visual --select" ] },
 
-	{ on = [ "d", "d" ], run = [ "remove --permanently --force", "escape --visual --select" ] },
+	{ on = [ "d", "d" ], run = [ "remove --force", "escape --visual --select" ] },
 
 	{ on = [ "v" ], run = "visual_mode" },
 	{ on = [ "V" ], run = "visual_mode --unset" },
