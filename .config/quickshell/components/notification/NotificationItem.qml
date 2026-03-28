@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell.Services.Notifications
-import Quickshell.Widgets
 import qs.services
 
 SwipeDelegate {
@@ -28,13 +27,13 @@ SwipeDelegate {
         spacing: 10
 
         Text {
-            text: summary
+            text: notification.summary
             font.family: "IosevkaTerm Nerd Font Propo"
             font.pointSize: 15
             color: {
-                if (urgency == NotificationUrgency.Critical)
+                if (notification.urgency === NotificationUrgency.Critical)
                     return "#f38ba8"
-                else if (urgency == NotificationUrgency.Low)
+                else if (notification.urgency === NotificationUrgency.Low)
                     return "#a6adc8"
                 else
                     return "#cdd6f4"
@@ -42,7 +41,7 @@ SwipeDelegate {
         }
 
         Text {
-            text: body
+            text: notification.body
             font.family: "IosevkaTerm Nerd Font Propo"
             font.pointSize: 12
             color: "#bac2de"
@@ -103,6 +102,6 @@ SwipeDelegate {
     }
 
     swipe.onCompleted: {
-        Notifs.removeNotification(index)
+        Notifs.removeNotification(notification.index)
     }
 }
