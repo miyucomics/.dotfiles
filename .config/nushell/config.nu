@@ -1,4 +1,5 @@
 alias ls = ls -a
+alias cat = bat -p -n --color=always
 
 $env.EDITOR = 'nvim'
 $env.LANG = "en_US.UTF-8"
@@ -10,7 +11,6 @@ $env.PATH = $env.PATH ++ [
 ]
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
-tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 zoxide init --cmd cd nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 

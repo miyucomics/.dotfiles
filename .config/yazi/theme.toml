@@ -8,13 +8,3 @@ rules = [
 	{ mime = "image/*", fg = "green" },
 	{ mime = "video/*", fg = "yellow" },
 ]
-
-[icon]
-globs = [
-    { url = "*/", text = "" },
-    { url = "*", text = "" }
-]
-dirs = []
-files = []
-exts  = []
-conds = []
