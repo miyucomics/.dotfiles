@@ -78,6 +78,14 @@ PanelWindow {
 		implicitHeight: parent.height - 300
         spacing: 10
 
+
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 150
+                easing.type: Easing.InOutSine
+            }
+        }
+
 		Component.onCompleted: {
 			for (var item in children)
 				children[item].anchors.horizontalCenter = wrap.horizontalCenter;
