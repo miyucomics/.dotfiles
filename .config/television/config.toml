@@ -49,3 +49,7 @@ ctrl-shift-p = "toggle_preview"
 ctrl-shift-h = "toggle_help"
 ctrl-shift-l = "toggle_layout"
 backspace = "delete_prev_char"
+
+[shell_integration.channel_triggers]
+"dirs" = ["cd", "ls"]
+"files" = ["cat", "mv", "cp", "nvim"]

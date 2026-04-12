@@ -1,0 +1,9 @@
+[metadata]
+name = "man pages"
+description = "A channel to select and read man pages"
+
+[source]
+command = "apropos ."
+
+[preview]
+command = "man '{0}'"
