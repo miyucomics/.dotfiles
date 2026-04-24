@@ -19,7 +19,7 @@ $env.GRADLE_USER_HOME = $"($env.XDG_DATA_HOME)/gradle"
 
 $env.GTK2_RC_FILES = $"($env.XDG_CONFIG_HOME)/gtk-2.0/gtkrc"
 
-$env._JAVA_OPTIONS = $'-Djava.util.prefs.userRoot="$($env.XDG_CONFIG_HOME)"/java'
+$env._JAVA_OPTIONS = $'-Djava.util.prefs.userRoot="($env.XDG_CONFIG_HOME)/java"'
 
 $env.NPM_CONFIG_INIT_MODULE = $"($env.XDG_CONFIG_HOME)/npm/config/npm-init.js"
 $env.NPM_CONFIG_CACHE = $"($env.XDG_CACHE_HOME)/npm"
