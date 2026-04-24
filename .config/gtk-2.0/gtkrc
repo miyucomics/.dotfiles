@@ -1,8 +1,3 @@
-# DO NOT EDIT! This file will be overwritten by nwg-look.
-# Any customization should be done in ~/.gtkrc-2.0.mine instead.
-
-include "/home/miyu/.gtkrc-2.0.mine"
-gtk-theme-name="Catppuccin"
 gtk-icon-theme-name="Adwaita"
 gtk-font-name="Adwaita Sans 11"
 gtk-cursor-theme-name="catppuccin-cursors"
