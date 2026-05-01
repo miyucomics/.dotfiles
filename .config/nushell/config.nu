@@ -1,5 +1,5 @@
 alias ls = ls -a
-alias cat = bat -p -n --color=always
+alias bat = bat -p -n --color=always
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")
