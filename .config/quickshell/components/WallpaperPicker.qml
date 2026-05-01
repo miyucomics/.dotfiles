@@ -92,6 +92,10 @@ PanelWindow {
 				carousel.incrementCurrentIndex()
 			if (event.key == Qt.Key.Key_K)
 				carousel.decrementCurrentIndex()
+			if (event.key == Qt.Key.Key_H)
+				carousel.decrementCurrentIndex()
+			if (event.key == Qt.Key.Key_L)
+				carousel.incrementCurrentIndex()
 		}
 	}
 
