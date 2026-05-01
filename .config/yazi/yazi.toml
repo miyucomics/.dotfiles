@@ -12,8 +12,8 @@ inkscape = [{ run = 'inkscape "$@"', orphan = true }]
 mpv = [{ run = 'mpv "$@"', orphan = true }]
 nvim = [{ run = 'nvim "$@"', block = true }]
 paplay = [{ run = 'paplay "$@"', orphan = true }]
-swww = [{ run = 'swww img "$@" -tcenter', orphan = true }]
-swww_pixel = [{ desc = "swww pixel", run = 'swww img "$@" -tcenter -fNearest', orphan = true }]
+awww = [{ run = 'awww img "$@" -tcenter', orphan = true }]
+awww_pixel = [{ desc = "awww pixel", run = 'awww img "$@" -tcenter -fNearest', orphan = true }]
 unzip = [{ run = 'unzip "$@" -x __M*' }]
 untar = [{ run = 'tar xzf "$@"' }]
 zathura = [{ run = 'zathura "$@"', orphan = true }]
@@ -25,7 +25,7 @@ rules = [
     {mime = "application/zip", use = ["unzip"]},
 
     {mime = "audio/*", use = ["paplay"]},
-    {mime = "image/*", use = ["aseprite", "swww", "swww_pixel", "zen"]},
+    {mime = "image/*", use = ["aseprite", "awww", "awww_pixel", "zen"]},
     {mime = "video/*", use = ["mpv"]},
 
     {url = "*.svg", use = ["inkscape", "zen"]},
