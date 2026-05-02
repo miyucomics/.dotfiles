@@ -1,9 +1,9 @@
 import Quickshell
-import qs.components
 import qs.components.osd
+import qs.components.overlays
 
 ShellRoot {
-    WallpaperPicker {}
     BrightnessOSD {}
     VolumeOSD {}
+    WallpaperOverlay {}
 }

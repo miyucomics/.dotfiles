@@ -1,5 +1,6 @@
 import QtQuick
 import qs.services
+import qs.components.generic
 
 OSDBar {
     id: root

@@ -1,5 +1,5 @@
 {
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "catppuccin-latte",
     "chat.commandCenter.enabled": false,
     "workbench.layoutControl.enabled": false,
     "workbench.navigationControl.enabled": false,
@@ -32,7 +32,7 @@
     "qt-qml.doNotAskForQmllsDownload": true,
     "qt-qml.qmlls.useQmlImportPathEnvVar": true,
     "window.menuBarVisibility": "hidden",
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Catppuccin Latte",
     "workbench.editorAssociations": {
         "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
         "*.qrc": "qt-core.qrcEditor"
@@ -42,5 +42,7 @@
             "name": "Qt-5.15.18-linux-g++_from_PATH",
             "path": "/usr/bin/qmake"
         }
-    ]
+    ],
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "none"
 }
