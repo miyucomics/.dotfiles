@@ -10,6 +10,8 @@ $env.CUDA_CACHE_PATH = $"($env.XDG_CACHE_HOME)/nv"
 
 $env.DOTNET_CLI_HOME = $"($env.XDG_DATA_HOME)/dotnet"
 
+$env.PULSE_COOKIE = $"($env.XDG_CONFIG_HOME)/pulse/cookie"
+
 $env.CARGO_HOME = $"($env.XDG_DATA_HOME)/cargo"
 $env.RUSTUP_HOME = $"($env.XDG_DATA_HOME)/rustup"
 
@@ -30,7 +32,6 @@ $env.EDITOR = 'nvim'
 $env.LANG = "en_US.UTF-8"
 $env.LC_ALL = "en_US.UTF-8"
 $env.PATH = $env.PATH ++ [
-    $"($env.HOME)/bin",
     $"($env.CARGO_HOME)/bin",
     $"($env.HOME)/.local/share/nvim/mason/bin"
 ]
