@@ -1,0 +1,32 @@
+.tabbrowser-tab[pending="true"] {
+    filter: grayscale(0.95);
+    opacity: 0.75;
+}
+
+#navigator-toolbox {
+    font-size: 12px;
+}
+
+tab-group .tabbrowser-tab:not(:first-of-type) {
+    margin-top: 5px !important;
+}
+
+#nav-bar {
+    margin-top: 10px !important;
+}
+
+#tabbrowser-arrowscrollbox-periphery,
+.tab-close-button,
+#zen-sidebar-top-buttons,
+#zen-sidebar-top-buttons-separator,
+.zen-workspace-close-unpinned-tabs-button,
+#zen-toggle-compact-mode,
+#back-button, #forward-button {
+    display: none !important;
+}
+
+#zen-sidebar-top-buttons-customization-target {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
