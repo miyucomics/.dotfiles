@@ -66,6 +66,7 @@ keymap = [
 	{ on = [ "g", "c" ], run = "cd ~/.dotfiles",           desc = "Go to the dotfiles directory" },
 	{ on = [ "g", "d" ], run = "cd ~/Documents",           desc = "Go to the documents directory" },
 	{ on = [ "g", "m" ], run = "cd ~/Documents/code/mods", desc = "Go to the mods directory" },
+	{ on = [ "g", "t" ], run = "cd ~/.local/share/Trash/", desc = "Go to the trash directory" },
 
 	{ on = [ "z" ],         run = "plugin zoxide",                desc = "Jump to a directory using zoxide" },
 	{ on = [ "Z" ],         run = "plugin fzf",                   desc = "Jump to a directory, or reveal a file using fzf" },

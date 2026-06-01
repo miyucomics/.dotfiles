@@ -1,9 +1,0 @@
-[metadata]
-name = "files"
-description = "A channel to select and preview files"
-
-[source]
-command = "ls ./**/* | where type == file | get name | str join '\n'"
-
-[preview]
-command = "bat -p -n --color=always '{}'"
