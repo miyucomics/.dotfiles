@@ -1,3 +1,13 @@
+keybinds {
+    shared_except "locked" {
+        unbind "Ctrl s"
+    }
+
+    search {
+        bind "Ctrl /"
+    }
+}
+
 themes {
     catppuccin-mocha {
         bg "#585b70"
