@@ -1,10 +1,9 @@
 keybinds {
     shared_except "locked" {
         unbind "Ctrl s"
-    }
-
-    search {
-        bind "Ctrl /"
+        bind "Ctrl /" {
+            SwitchToMode "search";
+        }
     }
 }
 
