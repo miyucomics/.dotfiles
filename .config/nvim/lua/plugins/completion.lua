@@ -6,6 +6,7 @@ return {
 			["<c-e>"] = { "show", "hide" },
 			["<c-k>"] = { "select_prev" },
 			["<c-j>"] = { "select_next" },
+			["<c-h>"] = { "scroll_documentation_up" },
 			["<c-l>"] = { "scroll_documentation_down" },
 			["<tab>"] = { "select_and_accept", "fallback" },
 		},

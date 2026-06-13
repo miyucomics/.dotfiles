@@ -1,5 +1,4 @@
 return {
-	"neovim/nvim-lspconfig",
 	{
 		"williamboman/mason.nvim",
 		cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },

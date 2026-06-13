@@ -13,7 +13,7 @@ return {
 
 			vim.g.rustaceanvim = {
 				server = {
-					on_attach = function(client, bufnr)
+					on_attach = function(_, bufnr)
 						if vim.lsp.inlay_hint then
 							vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 						end
@@ -27,10 +27,6 @@ return {
 						vim.keymap.set("n", "<leader>cd", function()
 							vim.cmd.RustLsp("openDocs")
 						end, opts)
-
-						vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-						vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-						vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 					end,
 					default_settings = {
 						["rust-analyzer"] = {
