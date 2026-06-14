@@ -4,8 +4,6 @@ keymap = [
 	{ on = [ "q" ],     run = "quit" },
     { on = [ "Q" ],     run = "quit --no-cwd-file" },
 
-	{ on = [ "s" ], run = "search rg" },
-
 	{ on = [ "g", "g" ], run = "arrow top", desc = "Move to top" },
 	{ on = [ "G" ], run = "arrow bot" },
 	{ on = [ "w" ], run = "tasks_show" },
@@ -27,11 +25,8 @@ keymap = [
 	{ on = [ "y" ], run = [ "yank", "escape --visual --select" ] },
 	{ on = [ "x" ], run = [ "yank --cut", "escape --visual --select" ] },
 	{ on = [ "p" ], run = "paste" },
-	{ on = [ "P" ], run = "paste --force" },
 	{ on = [ "a" ], run = "create" },
 	{ on = [ "r" ], run = "rename" },
-	{ on = [ ";" ], run = "shell --interactive" },
-	{ on = [ ":" ], run = "shell --block --interactive" },
 	{ on = [ "." ], run = "hidden toggle" },
 
 	{ on = [ "/" ], run = "find --smart" },
@@ -53,7 +48,7 @@ keymap = [
 	{ on = [ ",", "M" ], run = "sort modified --reverse --dir-first",     desc = "Sort by modified time (reverse)" },
 	{ on = [ ",", "c" ], run = "sort created --dir-first",                desc = "Sort by created time" },
 	{ on = [ ",", "C" ], run = "sort created --reverse --dir-first",      desc = "Sort by created time (reverse)" },
-	{ on = [ ",", "e" ], run = "sort extension --dir-first",         	   desc = "Sort by extension" },
+	{ on = [ ",", "e" ], run = "sort extension --dir-first",              desc = "Sort by extension" },
 	{ on = [ ",", "E" ], run = "sort extension --reverse --dir-first",    desc = "Sort by extension (reverse)" },
 	{ on = [ ",", "a" ], run = "sort alphabetical --dir-first",           desc = "Sort alphabetically" },
 	{ on = [ ",", "A" ], run = "sort alphabetical --reverse --dir-first", desc = "Sort alphabetically (reverse)" },
@@ -66,10 +61,12 @@ keymap = [
 	{ on = [ "g", "c" ], run = "cd ~/.dotfiles",           desc = "Go to the dotfiles directory" },
 	{ on = [ "g", "d" ], run = "cd ~/Documents",           desc = "Go to the documents directory" },
 	{ on = [ "g", "m" ], run = "cd ~/Documents/code/mods", desc = "Go to the mods directory" },
-	{ on = [ "g", "t" ], run = "cd ~/.local/share/Trash/", desc = "Go to the trash directory" },
+	{ on = [ "g", "t" ], run = "cd ~/.local/share/Trash",  desc = "Go to the trash directory" },
 
 	{ on = [ "z" ],         run = "plugin zoxide",                desc = "Jump to a directory using zoxide" },
 	{ on = [ "Z" ],         run = "plugin fzf",                   desc = "Jump to a directory, or reveal a file using fzf" },
+
+    { on = [ "!" ], run = 'shell "$SHELL" --block', desc = "Open shell here" }
 ]
 
 [select]
@@ -107,8 +104,3 @@ keymap = [
 	{ on = [ "u" ],     run = "undo" },
 	{ on = [ "<C-r>" ], run = "redo" }
 ]
-
-[[mgr.prepend_keymap]]
-on   = "!"
-run  = 'shell "$SHELL" --block'
-desc = "Open shell here"
