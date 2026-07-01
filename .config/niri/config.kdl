@@ -56,7 +56,7 @@ binds {
 
     Mod+T { spawn "footclient"; }
     Mod+Shift+T { spawn-sh "footclient -oline-height=25"; }
-    Mod+Control+T { spawn-sh "footclient -ocolors-dark.alpha=0.5"; }
+    Mod+Control+T { spawn-sh "footclient -ocolors-dark.alpha=0.25"; }
 
     Mod+G { spawn "zen-browser"; }
     Mod+Shift+G { spawn-sh "zen-browser --private-window"; }

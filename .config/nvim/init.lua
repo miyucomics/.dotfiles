@@ -31,8 +31,11 @@ require("lazy").setup("plugins", {
 	},
 })
 
+require("custom.runner")
+require("custom.themer")
+require("vim._core.ui2").enable()
+
 vim.o.statusline = "%!v:lua.require('custom.status')()"
-require('vim._core.ui2').enable()
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pylsp")

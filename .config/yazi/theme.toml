@@ -8,3 +8,7 @@ rules = [
 	{ mime = "image/*", fg = "green" },
 	{ mime = "video/*", fg = "yellow" },
 ]
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }

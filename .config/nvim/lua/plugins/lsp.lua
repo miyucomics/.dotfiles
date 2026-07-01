@@ -9,9 +9,18 @@ return {
 			},
 		},
 	},
+	"neovim/nvim-lspconfig",
 	{
 		"smjonas/inc-rename.nvim",
 		keys = { { "<leader>rr", ":IncRename " } },
+		opts = {},
+	},
+	{
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		opts = {},
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
 		opts = {},
 	},
 }
