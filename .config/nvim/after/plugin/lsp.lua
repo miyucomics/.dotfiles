@@ -1,8 +1,6 @@
 vim.diagnostic.config({
-     -- lsp_lines.nvim renders the errors as lines
 	virtual_text = false,
 	virtual_lines = true,
-
 	signs = true,
 	underline = true,
 	float = {

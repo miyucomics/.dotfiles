@@ -1,16 +1,14 @@
 return {
 	"nvim-telescope/telescope.nvim",
-    lazy = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	keys = {
 		{ "<leader><leader>", ":Telescope find_files<cr>" },
-		{ "<leader>cm", ":Telescope git_commits<cr>" },
 		{ "<leader>fb", ":Telescope buffers<cr>" },
 		{ "<leader>fg", ":Telescope live_grep<cr>" },
-		{ "<leader>fz", ":Telescope current_buffer_fuzzy_find<cr>" },
+		{ "<leader>cm", ":Telescope git_commits<cr>" },
 		{ "<leader>gt", ":Telescope git_status<cr>" },
 		{ "<leader>ma", ":Telescope marks<cr>" },
 	},
@@ -47,6 +45,8 @@ return {
 				["<esc>"] = actions.close,
 				["<c-j>"] = actions.move_selection_next,
 				["<c-k>"] = actions.move_selection_previous,
+				["<c-h>"] = actions.preview_scrolling_up,
+				["<c-l>"] = actions.preview_scrolling_down,
 			},
 		}
 		require("telescope").setup(opts)

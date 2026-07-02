@@ -3,7 +3,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
 		build = ":TSUpdate",
-		init = function()
+		config = function()
 			require("nvim-treesitter.config").setup({
 				sync_install = false,
 				auto_install = false,
@@ -17,7 +17,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		branch = "main",
-		init = function()
+		config = function()
 			vim.g.no_plugin_maps = true
 		end,
 	},

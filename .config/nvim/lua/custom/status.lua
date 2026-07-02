@@ -55,8 +55,8 @@ local textColor = ""
 M.mode = function()
 	local m = vim.api.nvim_get_mode().mode
 	local modes = M.modes[m]
-    background = "%#St_" .. modes[2] .. "Mode#"
-    textColor = "%#St_" .. modes[2] .. "ModeText#"
+	background = "%#St_" .. modes[2] .. "Mode#"
+	textColor = "%#St_" .. modes[2] .. "ModeText#"
 	return background .. " " .. modes[1] .. " " .. textColor .. " "
 end
 
@@ -90,16 +90,25 @@ end
 M.cursor = " %p%% "
 M.cursorpos = " %l:%v "
 M.textColorRestore = function()
-    return textColor
+	return textColor
 end
 M.backgroundRestore = function()
-    return background
+	return background
 end
 M["%="] = "%="
 
 return function()
 	local result = {}
-	for _, v in ipairs({ "mode", "file", "%=", "diagnostics", "textColorRestore", "cursor", "backgroundRestore", "cursorpos" }) do
+	for _, v in ipairs({
+		"mode",
+		"file",
+		"%=",
+		"diagnostics",
+		"textColorRestore",
+		"cursor",
+		"backgroundRestore",
+		"cursorpos",
+	}) do
 		local module = M[v]
 		module = type(module) == "string" and module or module()
 		table.insert(result, module)

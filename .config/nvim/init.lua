@@ -3,15 +3,9 @@ require("core.keymap")
 require("core.bootstrap")
 
 require("lazy").setup("plugins", {
-	rocks = {
-		enabled = false,
-	},
-	ui = {
-		backdrop = 100,
-	},
-	change_detection = {
-		enabled = false,
-	},
+	rocks = { enabled = false },
+	ui = { backdrop = 100 },
+	change_detection = { enabled = false },
 	performance = {
 		rtp = {
 			disabled_plugins = {
@@ -33,9 +27,8 @@ require("lazy").setup("plugins", {
 
 require("custom.runner")
 require("custom.themer")
+require("custom.terminal")
+
 require("vim._core.ui2").enable()
 
 vim.o.statusline = "%!v:lua.require('custom.status')()"
-
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("pylsp")
