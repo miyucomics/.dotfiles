@@ -1,11 +1,6 @@
 return {
-    cmd = { "lua-language-server" },
-    filetypes = { "lua" },
 	settings = {
 		Lua = {
-			diagnostics = {
-				globals = { "vim" },
-			},
 			workspace = {
 				library = {
 					"${3rd}/love2d/library",
@@ -13,7 +8,7 @@ return {
 					vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
 					vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
 				},
-				maxPreload = 100000,
+				maxPreload = 10000,
 				preloadFileSize = 10000,
 			},
 		},

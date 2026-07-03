@@ -26,3 +26,12 @@ vim.keymap.set("n", "<c-h>", "<c-w>h", { silent = true })
 vim.keymap.set("n", "<c-l>", "<c-w>l", { silent = true })
 vim.keymap.set("n", "<c-j>", "<c-w>j", { silent = true })
 vim.keymap.set("n", "<c-k>", "<c-w>k", { silent = true })
+
+-- Treesitter incremental selection
+vim.keymap.set("x", "<c-k>", function()
+	require("vim.treesitter._select").select_parent(vim.v.count1)
+end)
+
+vim.keymap.set("x", "<c-j>", function()
+	require("vim.treesitter._select").select_child(vim.v.count1)
+end)

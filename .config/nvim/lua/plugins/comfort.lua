@@ -1,14 +1,4 @@
 return {
-	{
-		"williamboman/mason.nvim",
-		cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-		opts = {
-			ui = {
-				backdrop = 100,
-				border = "rounded",
-			},
-		},
-	},
 	"neovim/nvim-lspconfig",
 	{
 		"smjonas/inc-rename.nvim",
@@ -22,5 +12,15 @@ return {
 	{
 		"norcalli/nvim-colorizer.lua",
 		opts = {},
+	},
+	{
+		"kawre/neotab.nvim",
+		event = "InsertEnter",
+		opts = {},
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = { disable_filetype = { "TelescopePrompt" } },
 	},
 }

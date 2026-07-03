@@ -3,6 +3,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
+			python = { "black" },
 			rust = { "rustfmt" },
 		},
 		format_on_save = {
@@ -10,11 +11,4 @@ return {
 			lsp_format = "fallback",
 		},
 	},
-	config = function(_, opts)
-		local conform = require("conform")
-		conform.setup(opts)
-		vim.keymap.set("n", "<leader>ff", function()
-			conform.format({ lsp_format = "fallback" })
-		end)
-	end,
 }
