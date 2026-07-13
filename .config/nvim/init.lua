@@ -25,9 +25,11 @@ require("lazy").setup("plugins", {
 	},
 })
 
+require("custom.theme").load_theme("catppuccin")
+require("custom.theme_switcher")
+
 require("custom.runner")
 require("custom.terminal")
-require("custom.theme_switcher")
 
 require("vim._core.ui2").enable()
 

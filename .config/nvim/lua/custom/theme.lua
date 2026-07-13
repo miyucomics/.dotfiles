@@ -6,10 +6,26 @@ vim.fn.mkdir(vim.g.base46_cache, "p")
 local nvconfig = require("nvconfig")
 
 local bespoke_themes = {
-	catppuccin = {
+	["catppuccin"] = {
 		plugin = "catppuccin",
 		colorscheme = "catppuccin-mocha",
-		opts = {},
+		dark = true,
+	},
+	["catppuccin-latte"] = {
+		plugin = "catppuccin",
+		colorscheme = "catppuccin-latte",
+		dark = false,
+	},
+	["bamboo"] = {
+		plugin = "bamboo",
+		colorscheme = "bamboo-vulgaris",
+		dark = true,
+	},
+	["flouromachine"] = {
+		plugin = "fluoromachine",
+		colorscheme = "fluoromachine",
+		opts = { glow = true },
+		dark = true,
 	},
 }
 
@@ -66,12 +82,12 @@ local function base46_themes()
 
 	for _, path in ipairs(paths) do
 		local name = vim.fn.fnamemodify(path, ":t:r")
-		if name ~= "init" then
-			themes[#themes + 1] = name
-		end
+		themes[name] = {
+			name = name,
+			dark = require("base46.themes." .. name).type == "dark",
+		}
 	end
 
-	table.sort(themes)
 	return themes
 end
 
@@ -82,19 +98,25 @@ function M.get_all_themes()
 		items[#items + 1] = {
 			name = name,
 			provider = "builtin",
+			dark = bespoke_themes[name].dark,
 		}
 	end
 
-	for _, name in ipairs(base46_themes()) do
+	local base46 = base46_themes()
+	for name in pairs(base46) do
 		if not bespoke_themes[name] then
 			items[#items + 1] = {
-				name = name,
+				name = base46[name].name,
 				provider = "base46",
+				dark = base46[name].dark,
 			}
 		end
 	end
 
 	table.sort(items, function(a, b)
+		if a.dark ~= b.dark then
+			return a.dark
+		end
 		return a.name < b.name
 	end)
 
@@ -104,7 +126,6 @@ end
 vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
 	callback = function()
 		local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
-
 		if normal.bg then
 			io.write(string.format("\027]11;#%06x\027\\", normal.bg))
 		end

@@ -14,14 +14,14 @@ nvim = [{ run = 'nvim "$@"', block = true }]
 paplay = [{ run = 'paplay "$@"', orphan = true }]
 awww = [{ run = 'awww img "$@" -tcenter', orphan = true }]
 awww_pixel = [{ desc = "awww pixel", run = 'awww img "$@" -tcenter -fNearest', orphan = true }]
+sioyek = [{ run = 'sioyek "$@"', orphan = true }]
 unzip = [{ run = 'unzip "$@" -x __M*' }]
 untar = [{ run = 'tar xzf "$@"' }]
-zathura = [{ run = 'zathura "$@"', orphan = true }]
 zen = [{ run = 'zen-browser "$@"', orphan = true }]
 
 [open]
 rules = [
-    {mime = "application/pdf", use = ["zathura"]},
+    {mime = "application/pdf", use = ["sioyek"]},
     {mime = "application/zip", use = ["unzip"]},
 
     {mime = "audio/*", use = ["paplay"]},

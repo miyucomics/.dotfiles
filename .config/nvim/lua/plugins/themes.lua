@@ -1,14 +1,6 @@
 return {
-	{
-		"NvChad/base46",
-	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		opts = {},
-		init = function()
-			vim.cmd.colorscheme("catppuccin")
-		end,
-	},
+	"NvChad/base46",
+	"catppuccin/nvim",
+	"ribru17/bamboo.nvim",
+	"maxmx03/fluoromachine.nvim",
 }

@@ -19,9 +19,13 @@ local function switcher()
 				results = entries,
 
 				entry_maker = function(item)
+					local type = "light"
+					if item.dark then
+						type = "dark"
+					end
 					return {
 						value = item,
-						display = string.format("%-20s [%s]", item.name, item.provider),
+						display = string.format("%-20s %-8s %s", item.name, item.provider, type),
 						ordinal = item.name,
 					}
 				end,
