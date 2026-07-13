@@ -1,5 +1,4 @@
 return {
-	"neovim/nvim-lspconfig",
 	{
 		"smjonas/inc-rename.nvim",
 		keys = { { "<leader>rr", ":IncRename " } },
@@ -7,6 +6,7 @@ return {
 	},
 	{
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		event = "LspAttach",
 		opts = {},
 	},
 	{
@@ -22,5 +22,9 @@ return {
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		opts = { disable_filetype = { "TelescopePrompt" } },
+	},
+	{
+		"mg979/vim-visual-multi",
+		keys = { "<c-down>", "<c-up>", "<c-n>" },
 	},
 }

@@ -26,8 +26,8 @@ require("lazy").setup("plugins", {
 })
 
 require("custom.runner")
-require("custom.themer")
 require("custom.terminal")
+require("custom.theme_switcher")
 
 require("vim._core.ui2").enable()
 
