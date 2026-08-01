@@ -36,5 +36,6 @@ $env.LC_ALL = "en_US.UTF-8"
 $env.PATH = $env.PATH ++ [
     $"($env.HOME)/bin",
     $"($env.CARGO_HOME)/bin",
+    $"($env.HOME)/.local/bin"
     $"($env.HOME)/.local/share/nvim/mason/bin"
 ]

@@ -1,6 +1,6 @@
 .tabbrowser-tab[pending="true"] {
     filter: grayscale(0.95);
-    opacity: 0.75;
+    opacity: 0.5;
 }
 
 #navigator-toolbox {
@@ -15,6 +15,7 @@ tab-group .tabbrowser-tab:not(:first-of-type) {
     margin-top: 10px !important;
 }
 
+.zen-view-splitter-header-container,
 #tabbrowser-arrowscrollbox-periphery,
 .tab-close-button,
 #zen-sidebar-top-buttons,
@@ -23,10 +24,4 @@ tab-group .tabbrowser-tab:not(:first-of-type) {
 #zen-toggle-compact-mode,
 #back-button, #forward-button {
     display: none !important;
-}
-
-#zen-sidebar-top-buttons-customization-target {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
