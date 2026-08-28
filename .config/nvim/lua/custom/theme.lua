@@ -21,10 +21,19 @@ local bespoke_themes = {
 		colorscheme = "bamboo-vulgaris",
 		dark = true,
 	},
-	["flouromachine"] = {
+	["fluoromachine"] = {
 		plugin = "fluoromachine",
 		colorscheme = "fluoromachine",
 		opts = { glow = true },
+		dark = true,
+	},
+	["cendre"] = {
+		plugin = "cendre",
+		colorscheme = "cendre",
+		opts = {
+			background = "hard",
+			italic_virtual_text = false,
+		},
 		dark = true,
 	},
 }

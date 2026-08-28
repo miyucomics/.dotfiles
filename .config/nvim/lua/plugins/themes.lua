@@ -3,4 +3,5 @@ return {
 	"catppuccin/nvim",
 	"ribru17/bamboo.nvim",
 	"maxmx03/fluoromachine.nvim",
+	"Aejkatappaja/cendre",
 }

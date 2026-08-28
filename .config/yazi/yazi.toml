@@ -28,6 +28,7 @@ rules = [
     {mime = "image/*", use = ["aseprite", "awww", "awww_pixel", "zen"]},
     {mime = "video/*", use = ["mpv"]},
 
+    {url = "*.epub", use = ["sioyek"]},
     {url = "*.svg", use = ["inkscape", "zen"]},
     {url = "*.html", use = ["zen", "nvim"]},
     {url = "*/", use = ["nvim"]},

@@ -21,7 +21,6 @@ ShellRoot {
         }
     }
 
-
     WlSessionLock {
         id: sessionLock
         locked: false
