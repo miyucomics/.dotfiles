@@ -7,17 +7,17 @@ show_hidden = true
 tab_size = 4
 
 [opener]
-aseprite = [{ run = 'aseprite "$@"', orphan = true }]
-inkscape = [{ run = 'inkscape "$@"', orphan = true }]
-mpv = [{ run = 'mpv "$@"', orphan = true }]
-nvim = [{ run = 'nvim "$@"', block = true }]
-paplay = [{ run = 'paplay "$@"', orphan = true }]
-awww = [{ run = 'awww img "$@" -tcenter', orphan = true }]
-awww_pixel = [{ desc = "awww pixel", run = 'awww img "$@" -tcenter -fNearest', orphan = true }]
-sioyek = [{ run = 'sioyek "$@"', orphan = true }]
-unzip = [{ run = 'unzip "$@" -x __M*' }]
-untar = [{ run = 'tar xzf "$@"' }]
-zen = [{ run = 'zen-browser "$@"', orphan = true }]
+aseprite = [{ run = 'aseprite %s', orphan = true }]
+inkscape = [{ run = 'inkscape %s', orphan = true }]
+mpv = [{ run = 'mpv %s', orphan = true }]
+nvim = [{ run = 'nvim %s', block = true }]
+paplay = [{ run = 'paplay %s', orphan = true }]
+awww = [{ run = 'awww img %s -tcenter', orphan = true }]
+awww_pixel = [{ desc = "awww pixel", run = 'awww img %s -tcenter -fNearest', orphan = true }]
+sioyek = [{ run = 'sioyek %s', orphan = true }]
+unzip = [{ run = 'unzip %s -x __M*' }]
+untar = [{ run = 'tar xzf %s' }]
+zen = [{ run = 'zen-browser %s', orphan = true }]
 
 [open]
 rules = [
