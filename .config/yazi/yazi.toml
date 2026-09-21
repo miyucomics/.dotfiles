@@ -14,13 +14,17 @@ nvim = [{ run = 'nvim %s', block = true }]
 paplay = [{ run = 'paplay %s', orphan = true }]
 awww = [{ run = 'awww img %s -tcenter', orphan = true }]
 awww_pixel = [{ desc = "awww pixel", run = 'awww img %s -tcenter -fNearest', orphan = true }]
-sioyek = [{ run = 'sioyek %s', orphan = true }]
+sioyek = [{ run = 'sioyek %s --new-window', orphan = true }]
 unzip = [{ run = 'unzip %s -x __M*' }]
 untar = [{ run = 'tar xzf %s' }]
 zen = [{ run = 'zen-browser %s', orphan = true }]
 
 [open]
 rules = [
+    {url = "*.epub", use = ["sioyek"]},
+    {url = "*.svg", use = ["inkscape"]},
+    {url = "*.html", use = ["zen", "nvim"]},
+
     {mime = "application/pdf", use = ["sioyek"]},
     {mime = "application/zip", use = ["unzip"]},
 
@@ -28,9 +32,6 @@ rules = [
     {mime = "image/*", use = ["aseprite", "awww", "awww_pixel", "zen"]},
     {mime = "video/*", use = ["mpv"]},
 
-    {url = "*.epub", use = ["sioyek"]},
-    {url = "*.svg", use = ["inkscape", "zen"]},
-    {url = "*.html", use = ["zen", "nvim"]},
     {url = "*/", use = ["nvim"]},
-    {url = "*", use = ["nvim"]}
+    {url = "*", use = ["nvim"]},
 ]

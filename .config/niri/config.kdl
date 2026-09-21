@@ -1,7 +1,6 @@
 prefer-no-csd
 
 spawn-at-startup "awww-daemon"
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup "foot --server"
 
 screenshot-path "~/Screenshots/%Y-%m-%d-%H-%M-%S.png"
@@ -21,8 +20,8 @@ binds {
     Mod+G { spawn "zen-browser"; }
     Mod+Shift+G { spawn-sh "zen-browser --private-window"; }
 
-    Mod+W { spawn-sh "awww img -twipe ~/.config/wallpapers/normal/$(ls ~/.config/wallpapers/normal/ | tofi --ascii-input true --prompt-text 'set wallpaper to ')"; }
-    Mod+Shift+W { spawn-sh "awww img -twipe -fNearest ~/.config/wallpapers/pixel/$(ls ~/.config/wallpapers/pixel/ | tofi --ascii-input true --prompt-text 'set wallpaper to ')"; }
+    Mod+W { spawn-sh "awww img -tcenter ~/.config/wallpapers/normal/$(ls ~/.config/wallpapers/normal/ | tofi --ascii-input true --prompt-text 'set wallpaper to ')"; }
+    Mod+Shift+W { spawn-sh "awww img -tcenter -fNearest ~/.config/wallpapers/pixel/$(ls ~/.config/wallpapers/pixel/ | tofi --ascii-input true --prompt-text 'set wallpaper to ')"; }
 
     Mod+O repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
@@ -58,6 +57,7 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
+
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
@@ -82,7 +82,8 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-    Mod+Space { toggle-window-floating; }
+    Mod+V { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
@@ -121,34 +122,43 @@ input {
 }
 
 layout {
-    gaps 3
+    gaps 2
 
-    default-column-width { proportion 0.5; }
+    default-column-width {
+        proportion 0.5
+    }
 
     preset-column-widths {
-        proportion 0.333
+        proportion 0.3333
         proportion 0.5
-        proportion 0.666
+        proportion 0.6666
         proportion 1.0
     }
 
     focus-ring {
-        width 4
+        width 2
         active-color "#89b4fa"
         inactive-color "#b4befe"
     }
+
+    background-color "transparent"
 }
 
 overview {
-    backdrop-color "#11111b"
     workspace-shadow {
         off
     }
 }
 
+layer-rule {
+    match namespace="awww-daemon"
+    place-within-backdrop true
+}
+
 window-rule {
     match app-id="footclient"
     background-effect {
+        xray false
         blur true
     }
 }
