@@ -1,0 +1,14 @@
+* {
+    --custom-app-top-bar-height: 10px;
+    font-family: "IosevkaTerm Nerd Font" !important;
+}
+
+.content_d125d2 > div:nth-of-type(3),
+.content_d125d2 > div:nth-of-type(4),
+.content_d125d2 > li.container_e45859.channel__972a0:nth-of-type(1),
+.bar_c38106,
+#app-mount > div.appAsidePanelWrapper_a3002d > div > div.app_a3002d > div > div.layers__960e4.layers__160d8 > div > div > div > div.content__5e434 > div.sidebar__5e434.theme-dark.theme-midnight.images-dark > nav > div.tree_ef3116 > div > :nth-last-child(-n + 2),
+.nowPlayingColumn__133bf,
+.buttons__74017 {
+    display: none !important;
+}
