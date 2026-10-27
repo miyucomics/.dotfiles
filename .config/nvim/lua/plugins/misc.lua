@@ -1,5 +1,20 @@
 return {
 	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			options = { section_separators = "", component_separators = "" },
+			sections = {
+				lualine_a = { "mode" },
+				lualine_b = { "filename" },
+				lualine_c = {},
+				lualine_x = { "lsp_status", "searchcount", "selectioncount" },
+				lualine_y = { "progress" },
+				lualine_z = { "location" },
+			},
+		},
+	},
+	{
 		"smjonas/inc-rename.nvim",
 		keys = { { "<leader>rr", ":IncRename " } },
 		opts = {},

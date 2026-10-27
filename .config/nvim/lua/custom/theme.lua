@@ -16,11 +16,6 @@ local bespoke_themes = {
 		colorscheme = "catppuccin-latte",
 		dark = false,
 	},
-	["bamboo"] = {
-		plugin = "bamboo",
-		colorscheme = "bamboo-vulgaris",
-		dark = true,
-	},
 	["fluoromachine"] = {
 		plugin = "fluoromachine",
 		colorscheme = "fluoromachine",

@@ -32,5 +32,3 @@ require("custom.runner")
 require("custom.terminal")
 
 require("vim._core.ui2").enable()
-
-vim.o.statusline = "%!v:lua.require('custom.status')()"

@@ -6,6 +6,7 @@ vim.opt.autoread = true
 vim.opt.autowrite = true
 vim.opt.backspace = "2"
 vim.opt.clipboard = "unnamedplus"
+vim.opt.cmdheight = 0
 vim.opt.expandtab = true
 vim.opt.fillchars = { eob = " " }
 vim.opt.laststatus = 3

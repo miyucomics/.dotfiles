@@ -52,7 +52,7 @@ local function switcher()
 					buffer = prompt_bufnr,
 					callback = function()
 						if action_state.get_selected_entry() then
-							require("custom.themer").set_theme(action_state.get_selected_entry().ordinal)
+							theme.load_theme(action_state.get_selected_entry().ordinal)
 						end
 					end,
 				})
